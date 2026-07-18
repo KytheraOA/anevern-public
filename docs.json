@@ -1,0 +1,159 @@
+{
+  "seo": {
+    "metatags": {
+      "robots": "noindex",
+      "charset": "UTF-8",
+      "color-scheme": "dark",
+      "viewport": "width=device-width, initial-scale=1.0",
+      "description": "Fantasy art by Kythera of Anevern",
+      "author": "Kythera of Anevern",
+      "category": "Art",
+      "language": "en",
+      "google": "notranslate",
+      "generator": "Mintlify",
+      "canonical": "https://www.anevern.com",
+      "og:title": "Anevern",
+      "og:site_name": "Anevern",
+      "og:description": "Fantasy Art by Kythera of Anevern"
+    }
+  },
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "luma",
+  "name": "Anevern",
+  "icons": {
+    "library": "fontawesome"
+  },
+  "colors": {
+    "primary": "#8576c6",
+    "light": "#8576c6",
+    "dark": "#8576c6"
+  },
+  "favicon": "/favicon.svg",
+    "redirects": [
+    {
+      "source": "/etc/discord",
+      "destination": "https://discord.gg/kDDBW25mcC"
+    },
+    {
+      "source": "/etc/bluesky",
+      "destination": "https://bsky.app/profile/kythera.bsky.social"
+    }
+  ],
+  "navigation": {
+    "groups": [
+      {
+        "group": " ",
+        "pages": [
+          "index",
+          "etc/about"
+        ]
+      },
+      {
+        "group": "Artwork",
+        "pages": [
+          "/galleries/crow-and-gargoyle",
+          "/galleries/fantasy-art",
+          "/galleries/fan-art",
+          "/galleries/sca",
+          "/galleries/sketchbook",
+          "/galleries/miniatures",
+          "/galleries/published-work"
+        ]
+      },
+      {
+        "group": "Support",
+        "pages": [
+          "etc/support",
+          "etc/tips",
+          "etc/shop"
+        ]
+      },
+      {
+        "group": "Connect",
+        "pages": [
+          "etc/discord",
+          "etc/bluesky",
+          "etc/twitch"
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/images/logo.png",
+    "dark": "/images/logo.png",
+    "href": "/index"
+  },
+
+  "footer": {
+    "links": [
+      {
+        "header": "Elsewhere",
+        "items": [
+          {
+            "label": "ArtStation",
+            "href": "https://www.artstation.com/kytheraoa"
+          },
+          {
+            "label": "Putty & Paint",
+            "href": "https://www.puttyandpaint.com/KytheraOA"
+          },
+          {
+            "label": "Fur Affinity",
+            "href": "https://www.furaffinity.net/user/kytheraoa"
+          }
+        ]
+      },
+      {
+        "header": "Community",
+        "items": [
+          {
+            "label": "Discord",
+            "href": "https://discord.gg/kDDBW25mcC"
+          },
+          {
+            "label": "Instagram",
+            "href": "https://instagram.com/kythera_of_anevern"
+          },
+          {
+            "label": "Bluesky",
+            "href": "https://bsky.app/profile/kythera.bsky.social"
+          },
+          {
+            "label": "Twitch",
+            "href": "https://twitch.tv/kytheraoa"
+          }
+        ]
+      },
+      {
+        "header": "Subscribe",
+        "items": [
+          {
+            "label": "Patreon",
+            "href": "https://www.patreon.com/kythera"
+          },
+          {
+            "label": "Ko-fi",
+            "href": "https://ko-fi.com/kythera"
+          }
+        ]
+      }
+    ]
+  },
+  "background": {
+  },
+  "appearance": {
+    "default": "dark",
+    "strict": true
+  },
+  "styling": {
+    "eyebrows": "section"
+  },
+  "thumbnails": {
+    "fonts": {
+      "family": "Agdasima"
+    }
+  },
+  "fonts": {
+    "family": "Inter"
+  }
+}

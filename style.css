@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+* {
+  font-family: 'Agdasima', sans-serif !important;
+}
+
+/* -------------------- BACKGROUND IMAGE OVERRIDES -------------------- */
+/* Kill the default background on all possible Mintlify containers */
+
+body,
+#__next, 
+main,
+#content-area-wrapper,
+.bg-background-light,
+.bg-background-dark {
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+/* Make the content containers transparent so the image is visible */
+#content-area,
+main, 
+.prose, 
+article {
+  background-color: transparent !important;
+}
+
+/* Add a slight semi-transparent overlay to the content for readability */
+.dark main {
+  background-color: rgba(0, 0, 0, 0.35) !important; /* Dark mode */
+  border-left: 1.5px solid rgb(0, 0, 0);
+}
+
+/* Apply the tiling background to the HTML root so it stays behind everything */
+html {
+  background-image: url('/images/ui-elements/bg-light.png') !important;
+  background-repeat: repeat !important;
+  background-size: auto !important;
+  background-attachment: fixed !important;
+}
+
+/* Give the header a solid background so stuff doesn't show through the header when the reader scrolls */
+header#navbar, 
+.sticky.top-0,
+#navbar-glass {
+  background-image: url('/images/ui-elements/featured.png');
+  background-color: #0b0b0f !important; /* Matches your dark theme */
+  border-bottom: 1.5px solid rgba(0, 0, 0);
+}
+
+/* -------------------- FONT FORMATTING OVERRIDES -------------------- */
+
+#page-title {
+  display: none !important; /* Hides the page title from the page body but keeps it in the sidebar nav*/
+}
+
+.agdasima-regular {
+  font-family: "Agdasima";
+  font-weight: 400;
+  font-style: normal;
+}
+
+.agdasima-bold {
+  font-family: "Agdasima";
+  font-weight: 700;
+  font-style: normal;
+} 
+
+a { /* Link style */
+  font-family: "Agdasima" !important;
+  font-weight: 400 !important;
+}
+
+/* mouse over link */
+a:hover {
+  color: #8576c6;
+}
+
+/* -------------------- TOC (RIGHT SIDEBAR) OVERRIDES -------------------- */
+/* Most pages use "mode: "wide'" format, which hides the TOC. Worked out this formatting in case I ever decide I want/need to use the TOC. */
+
+/* TOC Header ONLY ("On this page") */
+#table-of-contents-layout > div:first-child,
+#table-of-contents-layout > div:first-child p,
+#table-of-contents-layout > div:first-child span,
+[data-component-part="toc-title"],
+[data-component-name="toc-title"] {
+  font-family: 'Amatic SC', cursive !important;
+  font-weight: 700 !important;
+  font-size: 22px !important;
+  text-transform: none !important;
+}
+
+/* TOC Links - RESET to Agdasima */
+/* This targets the links specifically and forces them back to the body font */
+.toc-item,
+.toc-item a,
+.toc-item span,
+#table-of-contents-content a,
+#table-of-contents-content li a {
+  font-family: 'Agdasima', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  text-transform: none !important;
+}
+
+/* TOC Links (The clickable list) */
+.toc-item,
+.toc-item a,
+#table-of-contents a {
+  font-family: inherit !important; /* Uses the 'Inter' from docs.json */
+  font-weight: 400 !important;
+  font-size: 18px !important;
+}
+
+/* -------------------- LEFT SIDEBAR OVERRIDES -------------------- */
+
+/* ---- LEFT SIDEBAR OVERRIDES ---- */
+/* Target the breadcrumb container and the link inside it */
+.breadcrumb-item, 
+.breadcrumb-item a {
+  font-size: 16px !important; /* Change this to your preferred size */
+}
+
+/* Target the sidebar container and set the base font size */
+#sidebar-content,
+nav[aria-label="Sidebar"],
+.sidebar-container {
+  font-size: 20px !important;
+  border-right: 1px solid rgba(48, 48, 48, 0.8);
+  border-top: 3px solid rgba(48, 48, 48, 0.8);
+}
+
+/* Target the actual links and group headers */
+#sidebar-content a,
+#sidebar-content button,
+.sidebar-container a,
+.sidebar-container button {
+  font-size: 1.25rem !important;
+  line-height: 1.25rem !important;
+}
+
+/* Target the left sidebar group headings */
+.sidebar-title, 
+.sidebar-title span {
+  font-weight: 500 !important;    /* Makes it extra bold */
+  color: #8576c6 !important;      /* Replace with your preferred hex color */
+  text-transform: uppercase;      /* Optional: makes it all caps for a cleaner look */
+  letter-spacing: 0.05em;         /* Optional: adds a bit of space between letters */
+}
+
+/* Sidebar Category Titles (Left Sidebar) */
+h3.sidebar-title, 
+h3.sidebar-title span {
+  font-family: 'Amatic SC', cursive !important;
+  font-weight: 700 !important;
+  font-size: 22px !important;
+}
+
+/* Increase the icon size for links to match the larger text */
+.nav-anchor svg {
+  height: 1.5rem !important; /* Default is h-4 (1rem) */
+  width: 1.5rem !important;
+}
+
+/* Ensure it stays the correct color in Dark Mode */
+.dark .sidebar-title, 
+.dark .sidebar-title span {
+  color: #8576c6 !important;
+}
+
+/* -------------------- INCREASE PARAGRAPH FONT SIZE: REFINED BODY TEXT OVERRIDE -------------------- */
+
+/* 1. Set the new base size on the content containers */
+#content-area, 
+.prose, 
+[data-component-name="mdx"] {
+  font-size: 18px !important; /* adjust this to your liking */
+  line-height: 1.5rem;
+  margin-top: 0;
+}
+
+/* 2. Target everything EXCEPT headings and force them to inherit the base size */
+#content-area :not(h1, h2, h3, h4, h5, h6, svg, i), 
+.prose :not(h1, h2, h3, h4, h5, h6, svg, i), 
+[data-component-name="mdx"] :not(h1, h2, h3, h4, h5, h6, svg, i) {
+  font-size: inherit !important;
+}
+
+/* -------------------- BODY HEADING OVERRIDES -------------------- */
+
+#page-title, /* The Main Page Title */
+.prose h1 {
+  font-family: 'Amatic SC', cursive !important;
+  font-weight: 700 !important;
+  font-size: 30px !important;
+  text-transform: none !important;
+}
+
+/* Body Content Headings */
+.prose h1, 
+.prose h1 span { 
+  font-family: 'Amatic SC', cursive !important;
+  font-weight: 700 !important;
+  font-size: 30px !important; 
+}
+
+.prose h2, 
+.prose h2 span { 
+  font-family: 'Amatic SC', cursive !important;
+  font-weight: 700 !important;
+  font-size: 24px !important; 
+}
+
+.prose h3, 
+.prose h3 span { 
+  font-family: 'Amatic SC', cursive !important;
+  font-weight: 700 !important;
+  font-size: 22px !important; 
+}
+
+/* Heading Sizes */
+h1 { 
+  font-size: 30px !important;
+  font-weight: 700; /* Somehow this impacts the weight of ALL heading levels */
+  margin-top: 1rem; /* Distance between h1 and icon above */
+  margin-bottom: 1rem;
+}
+
+h2 { /* This is what's used in "cards" */
+  font-size: 24px !important;
+  font-weight: 500; /* Somehow this impacts the weight of ALL heading levels */
+  margin-top: 0.5rem; /* Distance between h2 and icon above */
+  margin-bottom: 0.5rem;
+}
+
+h3 { /* This afffects the sidebar headings; try not to use h3 in body text */
+  font-family: 'Amatic SC' !important;
+  font-size: 22px !important;
+}
+
+/* -------------------- CONTENT BODY OVERRIDES -------------------- */
+
+/* Increase vertical spacing between rows in CardGroups */
+.card-group, 
+[class*="CardGroup"] {
+  row-gap: 1.5rem !important; /* Default is usually 1.5rem or 2rem. 4rem provides a clear break. */
+}
+
+/* Force the content area to use more of the screen in Wide Mode */
+#content-area, 
+#body-content .prose,
+main .prose {
+  max-width: 800px !important; /* This expands the "walls" of your page (which will make the columns wider) */
+  width: 100% !important;
+  padding-bottom: 2rem !important;
+}
+/* Ensure the CardGroup/Grid actually fills that new space */
+.card-group, 
+[class*="CardGroup"],
+.columns-container {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Target the inner content wrapper (below content, above pagination) */
+#content {
+  margin-bottom: 2rem !important;
+  padding-bottom: 0rem !important;
+}
+
+/* Reduce space above/below the pagination (Previous/Next links) */
+#pagination {
+  margin-top: -2rem !important;
+  margin-bottom: -5rem !important; /* This is the line that reduces the vertical space between pagination and the border above the footer */
+}
+
+/* -------------------- FOOTER AREA OVERRIDES -------------------- */
+
+/* THE FOOTER STRUCTURAL RESET - Force the columns to stop spreading out */
+footer div[class*="grid"],
+footer div[class*="flex-col"],
+footer ul,
+footer nav {
+  gap: 0px !important;  /* Removes grid/flex gaps */
+  height: auto !important;  /* Prevents forced stretching */
+  margin-bottom: 4px;
+}
+
+/* Target the Headings */
+footer h3,
+footer [class*="font-semibold"]:not(a) {
+  font-family: "Amatic SC" !important;
+  font-size: 20px !important;
+  margin-bottom: 5px !important;  /* Adjust the space between the last link and the divider below it */
+  margin-top: 0px !important;
+  padding: 0 !important;
+}
+
+/* Target the Links and their wrappers */
+footer li,
+footer a {
+  font-size: 18px !important;
+  line-height: 1.5 !important;    /* Adjust this to control link-to-link spacing */
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+/* --- FOOTER SPACING --- */
+
+/* Reduce the top spacing of the footer */
+footer {
+  background-image: url('/images/ui-elements/review-header-bg.png');
+  background-color: #000000 !important;
+  background-size: contain;
+  display: flex !important; /* Force the footer's bottom section to stack vertically */
+  flex-direction: column !important;
+  align-items: flex-start !important; /* Aligns everything to the left */
+  border-left: 1.5px solid rgb(0, 0, 0) !important; 
+  margin-top: 0rem !important; /* Space between border (previous line) and footer content. Adjust this number to your liking */
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important; /* This is the space between the footer color and the actual bottom of the page */
+}
+
+/* Target the specific wrapper div inside the footer */
+footer#footer > div.advanced-footer,
+footer#footer > div {
+  padding-top: 1rem !important;    /* Reduced from 7rem */
+  padding-bottom: 1rem !important; /* Reduced from 7rem */
+  gap: 1rem !important;           /* Reduces space between link columns and copyright line */
+}
+
+/* ---- "Sticky Footer" force fix ---- */
+
+/* 1. Ensure the main container takes up at least the full height of the screen */
+#content-area {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: calc(100vh - 230px) !important;
+}
+
+/* 2. Force the content wrapper to grow and fill all empty space */
+#content {
+  flex: 1 0 auto !important;
+}
+
+/* -------------------- ATTRIBUTION AND COPYRIGHT OVERRIDES -------------------- */
+
+/* Ensure the copyright takes up the full width */
+#custom-copyright {
+  width: 100% !important;
+  text-align: left !important;
+  margin-top: 1rem !important; /* space between copyright and divider */
+  margin-bottom: 0rem !important; /* space between copyright and attribution */
+}
+
+/* Target the container holding the Mintlify attribution */
+footer a[href*="mintlify.com"] {
+  width: 100% !important;
+  margin-top: 4px !important; /* Small gap between copyright and attribution */
+  margin-bottom: 0px !important;
+}
+
+/* If the attribution is inside a wrapper, make that wrapper full width too */
+footer div:has(a[href*="mintlify.com"]) {
+  width: 100% !important;
+  display: inline-block !important;
+  margin-top: 5px !important;
+}
+
+/* -------------------- MOBILE SIDEBAR FIX -------------------- */
+
+/* Luma Theme: Mobile Drawer Opaque Fix */
+@media screen and (max-width: 1024px) {
+  /* 1. Target the actual Dialog Panel (the drawer itself) */
+  [role="dialog"], 
+  [data-state="open"] > [role="dialog"],
+  div[class*="Fixed"] > div[class*="DialogPanel"] {
+    background-color: #0a0a0a !important; /* Solid deep black */
+    background-image: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    opacity: 1 !important;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.9) !important;
+  }
+
+  /* 2. Target the Sidebar Content inside that Dialog */
+  [role="dialog"] #sidebar-content,
+  [role="dialog"] aside {
+    background-color: #0a0a0a !important;
+    opacity: 1 !important;
+  }
+
+  /* 3. Target the Overlay (the part that dims the rest of the page) */
+  /* We make this darker so the drawer stands out more */
+  [data-state="open"] > [class*="DialogOverlay"],
+  [role="presentation"] > div[class*="Overlay"] {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(4px) !important;
+  }
+
+  /* 4. Ensure all text inside the drawer is white and readable */
+  [role="dialog"] a, 
+  [role="dialog"] button, 
+  [role="dialog"] span,
+  [role="dialog"] p {
+    color: #ffffff !important;
+    opacity: 1 !important;
+  }
+}
+
+/* -------------------- Luma Theme: Remove Frame Grid Lines -------------------- */
+/* The Luma theme ha some faint gray grid lines that appear in the background of `Frame` elements. I don't like that at all, so this removes the grid lines. */
+
+/* 1. Target the specific SVG pattern variable used by Luma */
+:root {
+  --frame-grid-pattern: none !important;
+  --grid-pattern: none !important;
+  --dot-pattern: none !important;
+}
+
+/* 2. Target the Frame component and its internal SVG/Pattern layers */
+[data-component-name="frame"],
+[data-component-name="frame"] div,
+[data-component-name="frame"] svg {
+  background-image: none !important;
+  background: none !important;
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+}
+
+/* 3. Target the specific Tailwind 'bg-grid' or 'bg-dot' classes if they are present */
+[class*="bg-grid"],
+[class*="bg-dot"],
+[class*="blueprint"] {
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+/* 4. Target the specific absolute-positioned overlay that Luma uses */
+[data-component-name="frame"] > div:first-child > div:first-child {
+  background-image: none !important;
+  display: none !important;
+}
+
+/* 5. Ensure the frame border remains visible */
+[data-component-name="frame"] {
+  border: 1px solid #262626 !important;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* This was a pain in the @$$ to code. It was made possible with help from a custom Rovo agent I named "Mintlify Donut"; "Mintlify" to specify what the agent was designed to help with, and "Donut" for the cat in _Dungeon Crawler Carl_ just so I could get the satisfaction of shouting "Goddammit Donut!" whenever I got frustrated. */
