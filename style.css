@@ -1,12 +1,52 @@
+/*-----------------------------------------------------------------------------------*/
+/*	01. Fonts
+/*-----------------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 
 * {
   font-family: 'Agdasima', sans-serif !important;
 }
 
-/* -------------------- BACKGROUND IMAGE OVERRIDES -------------------- */
-/* Kill the default background on all possible Mintlify containers */
+.agdasima-regular {
+  font-family: "Agdasima";
+  font-weight: 400;
+  font-style: normal;
+}
 
+.agdasima-bold {
+  font-family: "Agdasima";
+  font-weight: 700;
+  font-style: normal;
+} 
+
+.amatic-sc-regular {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.amatic-sc-bold {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+a { /* Link style */
+  font-family: "Agdasima" !important;
+  font-weight: 400 !important;
+}
+
+/* mouse over link */
+a:hover {
+  color: #8576c6 !important;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	02. Background image
+/*-----------------------------------------------------------------------------------*/
+
+/* Kill the default background on all possible Mintlify containers */
 body,
 #__next, 
 main,
@@ -33,7 +73,7 @@ article {
 
 /* Apply the tiling background to the HTML root so it stays behind everything */
 html {
-  background-image: url('/images/ui-elements/bg-light.png') !important;
+  background-image: url('https://www.anevern.com/images/ui-elements/bg-light.png') !important;
   background-repeat: repeat !important;
   background-size: auto !important;
   background-attachment: fixed !important;
@@ -43,41 +83,41 @@ html {
 header#navbar, 
 .sticky.top-0,
 #navbar-glass {
-  background-image: url('/images/ui-elements/featured.png');
+  background-image: url('https://www.anevern.com/images/ui-elements/featured.png');
   background-color: #0b0b0f !important; /* Matches your dark theme */
   border-bottom: 1.5px solid rgba(0, 0, 0);
 }
 
-/* -------------------- FONT FORMATTING OVERRIDES -------------------- */
-
-#page-title {
-  display: none !important; /* Hides the page title from the page body but keeps it in the sidebar nav*/
+/* 1. Kill the background on the header and its immediate children */
+header#header, 
+header#header > div,
+header#header .eyebrow {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+/* 2. Remove the fixed height that creates the "box" shape */
+header#header .eyebrow {
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+/* 3. If the gray is coming from a 'before' or 'after' decoration */
+header#header::before,
+header#header::after,
+header#header > div::before,
+header#header > div::after {
+  display: none !important;
+  content: none !important;
 }
 
-.agdasima-regular {
-  font-family: "Agdasima";
-  font-weight: 400;
-  font-style: normal;
-}
+/*-----------------------------------------------------------------------------------*/
+/*	03. Table of Contents (right sidebar)
+/*-----------------------------------------------------------------------------------*/
 
-.agdasima-bold {
-  font-family: "Agdasima";
-  font-weight: 700;
-  font-style: normal;
-} 
-
-a { /* Link style */
-  font-family: "Agdasima" !important;
-  font-weight: 400 !important;
-}
-
-/* mouse over link */
-a:hover {
-  color: #8576c6;
-}
-
-/* -------------------- TOC (RIGHT SIDEBAR) OVERRIDES -------------------- */
-/* Most pages use "mode: "wide'" format, which hides the TOC. Worked out this formatting in case I ever decide I want/need to use the TOC. */
+/* Most pages use `mode: "wide"` format', which hides the TOC. 
+I worked out this formatting in case I ever decide I want/need to use the TOC. */
 
 /* TOC Header ONLY ("On this page") */
 #table-of-contents-layout > div:first-child,
@@ -113,14 +153,9 @@ a:hover {
   font-size: 18px !important;
 }
 
-/* -------------------- LEFT SIDEBAR OVERRIDES -------------------- */
-
-/* ---- LEFT SIDEBAR OVERRIDES ---- */
-/* Target the breadcrumb container and the link inside it */
-.breadcrumb-item, 
-.breadcrumb-item a {
-  font-size: 16px !important; /* Change this to your preferred size */
-}
+/*-----------------------------------------------------------------------------------*/
+/*	04. Left sidebar
+/*-----------------------------------------------------------------------------------*/
 
 /* Target the sidebar container and set the base font size */
 #sidebar-content,
@@ -138,7 +173,9 @@ nav[aria-label="Sidebar"],
 .sidebar-container button {
   font-size: 1.25rem !important;
   line-height: 1.25rem !important;
+  color: #a2a2a4;
 }
+
 
 /* Target the left sidebar group headings */
 .sidebar-title, 
@@ -163,13 +200,26 @@ h3.sidebar-title span {
   width: 1.5rem !important;
 }
 
-/* Ensure it stays the correct color in Dark Mode */
-.dark .sidebar-title, 
-.dark .sidebar-title span {
+/* Restore purple color for the active sidebar link */
+.sidebar-item-active,
+[class*="sidebar"] a[aria-current="page"],
+[class*="sidebar"] a.active,
+.nav-link-active {
+  color: #8576c6 !important;
+  font-weight: 600 !important; /* Optional: makes it pop a bit more */
+}
+/* Ensure the icon next to the active link also turns purple (if applicable) */
+.sidebar-item-active svg,
+[aria-current="page"] svg {
+  fill: #8576c6 !important;
   color: #8576c6 !important;
 }
 
-/* -------------------- INCREASE PARAGRAPH FONT SIZE: REFINED BODY TEXT OVERRIDE -------------------- */
+/*-----------------------------------------------------------------------------------*/
+/* 05. Body Text overrides
+/*-----------------------------------------------------------------------------------*/
+
+/* Incrase paragraph text size */
 
 /* 1. Set the new base size on the content containers */
 #content-area, 
@@ -187,7 +237,10 @@ h3.sidebar-title span {
   font-size: inherit !important;
 }
 
-/* -------------------- BODY HEADING OVERRIDES -------------------- */
+/* Heading overrides */
+#page-title {
+  display: none !important; /* Hides the page title from the page body but keeps it in the sidebar nav*/
+}
 
 #page-title, /* The Main Page Title */
 .prose h1 {
@@ -239,7 +292,9 @@ h3 { /* This afffects the sidebar headings; try not to use h3 in body text */
   font-size: 22px !important;
 }
 
-/* -------------------- CONTENT BODY OVERRIDES -------------------- */
+/*-----------------------------------------------------------------------------------*/
+/* 06. Body content overrides
+/*-----------------------------------------------------------------------------------*/
 
 /* Increase vertical spacing between rows in CardGroups */
 .card-group, 
@@ -269,13 +324,30 @@ main .prose {
   padding-bottom: 0rem !important;
 }
 
-/* Reduce space above/below the pagination (Previous/Next links) */
-#pagination {
-  margin-top: -2rem !important;
-  margin-bottom: -5rem !important; /* This is the line that reduces the vertical space between pagination and the border above the footer */
+/*-----------------------------------------------------------------------------------*/
+/* 06.1 Refining spacing in callouts
+/*-----------------------------------------------------------------------------------*/
+
+/* Target the text area (prose) inside any callout */
+div.flex.gap-3 > div.prose,
+div.flex.gap-3 > div.callout-content {
+  margin-bottom: -1.75rem !important;
 }
 
-/* -------------------- FOOTER AREA OVERRIDES -------------------- */
+/* Remove margin from the last element inside the text area */
+div.prose > *:last-child {
+  margin-bottom: 0rem !important;
+}
+
+/* Remove the default top margin from h2 headings inside callouts */
+div.flex.gap-3 h2 {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* 07. Footer area overrides
+/*-----------------------------------------------------------------------------------*/
 
 /* THE FOOTER STRUCTURAL RESET - Force the columns to stop spreading out */
 footer div[class*="grid"],
@@ -304,13 +376,16 @@ footer a {
   line-height: 1.5 !important;    /* Adjust this to control link-to-link spacing */
   margin-top: 0px !important;
   margin-bottom: 0px !important;
+  color: #a2a2a4;
 }
 
-/* --- FOOTER SPACING --- */
+/*-----------------------------------------------------------------------------------*/
+/* 07.1 Footer: Spacing
+/*-----------------------------------------------------------------------------------*/
 
 /* Reduce the top spacing of the footer */
 footer {
-  background-image: url('/images/ui-elements/review-header-bg.png');
+  background-image: url('https://www.anevern.com/images/ui-elements/review-header-bg.png');
   background-color: #000000 !important;
   background-size: contain;
   display: flex !important; /* Force the footer's bottom section to stack vertically */
@@ -330,7 +405,9 @@ footer#footer > div {
   gap: 1rem !important;           /* Reduces space between link columns and copyright line */
 }
 
-/* ---- "Sticky Footer" force fix ---- */
+/*-----------------------------------------------------------------------------------*/
+/* 07.2 Footer: "Sticky Footer" force fix 
+/*-----------------------------------------------------------------------------------*/
 
 /* 1. Ensure the main container takes up at least the full height of the screen */
 #content-area {
@@ -344,7 +421,9 @@ footer#footer > div {
   flex: 1 0 auto !important;
 }
 
-/* -------------------- ATTRIBUTION AND COPYRIGHT OVERRIDES -------------------- */
+/*-----------------------------------------------------------------------------------*/
+/* 07.3 Footer: Attributon & copyright
+/*-----------------------------------------------------------------------------------*/
 
 /* Ensure the copyright takes up the full width */
 #custom-copyright {
@@ -368,9 +447,12 @@ footer div:has(a[href*="mintlify.com"]) {
   margin-top: 5px !important;
 }
 
-/* -------------------- MOBILE SIDEBAR FIX -------------------- */
+/*-----------------------------------------------------------------------------------*/
+/*	08. Luma theme overrides
+/*-----------------------------------------------------------------------------------*/
 
-/* Luma Theme: Mobile Drawer Opaque Fix */
+/* Mobile drawer opacity fix */
+/* The fight for the page background image impacted the mobile menu/sidebar. This fixes that. */
 @media screen and (max-width: 1024px) {
   /* 1. Target the actual Dialog Panel (the drawer itself) */
   [role="dialog"], 
@@ -384,14 +466,14 @@ footer div:has(a[href*="mintlify.com"]) {
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.9) !important;
   }
 
-  /* 2. Target the Sidebar Content inside that Dialog */
+  /* Target the Sidebar Content inside that Dialog */
   [role="dialog"] #sidebar-content,
   [role="dialog"] aside {
     background-color: #0a0a0a !important;
     opacity: 1 !important;
   }
 
-  /* 3. Target the Overlay (the part that dims the rest of the page) */
+  /* Target the Overlay (the part that dims the rest of the page) */
   /* We make this darker so the drawer stands out more */
   [data-state="open"] > [class*="DialogOverlay"],
   [role="presentation"] > div[class*="Overlay"] {
@@ -399,7 +481,7 @@ footer div:has(a[href*="mintlify.com"]) {
     backdrop-filter: blur(4px) !important;
   }
 
-  /* 4. Ensure all text inside the drawer is white and readable */
+  /* Ensure all text inside the drawer is white and readable */
   [role="dialog"] a, 
   [role="dialog"] button, 
   [role="dialog"] span,
@@ -409,7 +491,10 @@ footer div:has(a[href*="mintlify.com"]) {
   }
 }
 
-/* -------------------- Luma Theme: Remove Frame Grid Lines -------------------- */
+/*-----------------------------------------------------------------------------------*/
+/*	08.1 Luma theme: Remove grid lines from <Frame> blocks
+/*-----------------------------------------------------------------------------------*/
+
 /* The Luma theme ha some faint gray grid lines that appear in the background of `Frame` elements. I don't like that at all, so this removes the grid lines. */
 
 /* 1. Target the specific SVG pattern variable used by Luma */
@@ -448,5 +533,71 @@ footer div:has(a[href*="mintlify.com"]) {
   border: 1px solid #262626 !important;
 }
 
-/* ------------------------------------------------------------------------------------------------------------------ */
+/*-----------------------------------------------------------------------------------*/
+/*	09. Miscellaneous
+/*-----------------------------------------------------------------------------------*/
+
+/* Line spacing for unordered lists */
+ul li {
+  margin-bottom: 1px; /* Lower this value to reduce gaps */
+  margin-top: 0;      /* Strips default browser top margins if present */
+}
+
+/* Target the breadcrumb container and the link inside it */
+.breadcrumb-item, 
+.breadcrumb-item a {
+  font-size: 16px !important; /* Change this to your preferred size */
+  text-transform: none !important;
+}
+
+/* Completely hide the search bar and its container */
+/* It would be nice if my site had its own search function, but that's not what this is. */
+#search-bar-entry,
+#search-bar-entry-mobile,
+.search-container,
+button[aria-label*="Search"],
+div[class*="search-bar"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Target the specific AI button by its unique background color and shape */
+div.rounded-\[500px\].bg-\[\#FFFFFF33\] {
+  display: none !important;
+}
+
+/* A secondary safe selector for the Mintlify assistant trigger */
+#assistant-entry, 
+#assistant-entry-mobile {
+  display: none !important;
+}
+
+/* Completely remove the Mintlify widget container and all its contents */
+div[role="status"][aria-live="polite"].fixed.z-999,
+div[class*="widget-grabbing"],
+.bg-\[oklch\(14\.7\%\_0\.004\_49\.3\)\] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Footnotes callout on the about.mdx page */
+/* Target the prose container that is a direct parent of our custom class */
+div:has(> .tight-footnotes) {
+  margin-bottom: 1rem !important;
+}
+
+/* Ensure the list items inside don't fight the shrink */
+.tight-footnotes ul, 
+.tight-footnotes li:last-child {
+  margin-bottom: 1px !important;
+  margin-bottom: 0.5rem !important;
+  padding-bottom: 0 !important;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	10. Final Comments
+/*-----------------------------------------------------------------------------------*/
 /* This was a pain in the @$$ to code. It was made possible with help from a custom Rovo agent I named "Mintlify Donut"; "Mintlify" to specify what the agent was designed to help with, and "Donut" for the cat in _Dungeon Crawler Carl_ just so I could get the satisfaction of shouting "Goddammit Donut!" whenever I got frustrated. */

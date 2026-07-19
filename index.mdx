@@ -1,9 +1,29 @@
 ---
-title: "Artwork Galleries"
+title: "Home"
+icon: "house"
 mode: "wide"
-noindex: true
 ---
 
-import MySnippet from "/snippets/galleries.mdx";
+<img
+  className="rounded-lg"
+  src="https://www.anevern.com/images/Banner-Lantern2.png"
+  noZoom
+/>
 
-<MySnippet/>
+<Card title="Under Construction" type="info">
+  My website is currently undergoing a complete refresh. If you're looking for my work, check out the options below!
+</Card>
+
+<CardGroup cols={3}>
+  <Card title="Fantasy Art" img="https://www.anevern.com/images/artstation-preview.png" href="https://www.artstation.com/kytheraoa">
+    If you're looking for my art, you can find some of my most recent (and some classic) work on [ArtStation](https://www.artstation.com/kytheraoa).
+  </Card>
+
+  <Card title="Miniatures & More" img="https://www.anevern.com/images/putty-and-paint-preview.png" href="https://www.puttyandpaint.com/KytheraOA/">
+    To check out some of my painted miniatures, go to my gallery on [Putty & Paint](https://www.puttyandpaint.com/KytheraOA/).
+  </Card>
+
+  <Card title="Support My Work" img="https://www.anevern.com/images/support.png" href="https://www.patreon.com/kythera">
+    To support my work, consider subscribing via [Patreon]() or leaving a tip/making a purchase from my shop on [Ko-fi](https://ko-fi.com/kythera/shop/).
+  </Card>
+</CardGroup>

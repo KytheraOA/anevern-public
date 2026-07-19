@@ -79,8 +79,8 @@
     ]
   },
   "logo": {
-    "light": "https://www.anevern.com/logo/logo.png",
-    "dark": "https://www.anevern.com/logo/logo.png",
+    "light": "https://www.anevern.com/images/logo.png",
+    "dark": "https://www.anevern.com/images/logo.png",
     "href": "/index"
   },
 
@@ -155,12 +155,5 @@
   },
   "fonts": {
     "family": "Inter"
-  },
-"errors": {
-  "404": {
-    "redirect": false,
-    "title": "Not Found",
-    "description": "That ain't here. Go back [home](https://www.anevern.com/) and try again. ![A Bengal cat wearing a tiny mushroom hat. The image says 'princess in nother castle sry'](https://www.anevern.com/images/ui-elements/404.jpg)"
-    }
   }
 }
