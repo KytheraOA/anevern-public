@@ -36,10 +36,10 @@ I take a lot of liberties, but these are the foundation of how I write:
 ### Colors 
 
 These are the main colors used on the site: 
-* Purple: #8576c6 - Sidebar headings, link hover, link underline
-* Gray-400: #a2a2a4 - Body text color
-* Black, 35% transparency: rgba(0, 0, 0, 0.35) - Background color overlay (over backgroud image, behind text)
-* Dark Gray - #0b0b0f - Extra background color 
+* Purple: `#8576c6` - Sidebar headings, link hover, link underline
+* Gray-400: `#a2a2a4` - Body text color
+* Black, 35% transparency: `rgba(0, 0, 0, 0.35)` - Background color overlay (over backgroud image, behind text)
+* Dark Gray - `#0b0b0f` - Extra background color 
 
 These are extra colors I'm recording for reference: 
 <details>
@@ -48,7 +48,7 @@ These are extra colors I'm recording for reference:
 
 <ul>
 <li> #ffffff1a | rgb(255 255 255 / 10%)<br>
-<li> 00000080 | rgb(0 0 0 / 50%)<br>
+<li> #00000080 | rgb(0 0 0 / 50%)<br>
 <li> #d1d5dc<br>
 <li> #f6f3f4<br>
 <li> #99a1af<br>
