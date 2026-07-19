@@ -1,0 +1,65 @@
+## Start live preview
+
+```bash
+mintlify dev
+```
+
+## Icons
+Mintlify uses https://fontawesome.com/icons by default. 
+
+## Mintlify Documentation
+Stuff I want to be able to quickly reference from official Mintlify documentation
+* https://www.mintlify.com/docs/organize/pages
+* https://www.mintlify.com/docs/organize/hidden-pages
+* https://www.mintlify.com/docs/optimize/seo
+  * Includes "noindex"
+* 
+
+## Other Referenc
+* https://docs.github.com/en/contributing/writing-for-github-docs/using-yaml-frontmatter
+* Remove `.DS_Store` files from repo: https://stackoverflow.com/questions/107701/how-can-i-remove-ds-store-files-from-a-git-repository
+
+## Nav bar bit I removed
+This adds a colored button to the nav bar. This one says "Dashboard" and links to the Mintlify dashboard.
+
+```json
+  "navbar": {
+    "links": [],
+    "primary": {
+      "type": "button",
+      "label": "Dashboard",
+      "href": "https://dashboard.mintlify.com"
+    }
+  },
+```
+
+```CSS
+/* --- COLLAPSE EMPTY FOOTER COLUMN --- */
+/* 1. Completely remove the first column from the grid layout */
+footer .grid, 
+footer [class*="grid-cols"] {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
+  display: flex !important; /* Force flex to ignore grid cells */
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  gap: 5rem !important;
+  margin-left: 0 !important;
+}
+
+/* 2. Ensure the first child (the empty logo container) has zero width */
+footer .container > div > div:first-child {
+  display: none !important;
+  width: 0 !important;
+  flex-basis: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 3. Shift the entire container to the left wall */
+footer .container {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  max-width: none !important;
+  padding-left: 2rem !important;
+}
+```
