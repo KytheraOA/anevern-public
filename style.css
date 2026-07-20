@@ -164,6 +164,7 @@ nav[aria-label="Sidebar"],
   font-size: 20px !important;
   border-right: 1px solid rgba(48, 48, 48, 0.8);
   border-top: 3px solid rgba(48, 48, 48, 0.8);
+  padding-top: -1rem !important;
 }
 
 /* Target the actual links and group headers */
@@ -220,14 +221,13 @@ h3.sidebar-title span {
 /*-----------------------------------------------------------------------------------*/
 
 /* Incrase paragraph text size */
-
 /* 1. Set the new base size on the content containers */
 #content-area, 
 .prose, 
 [data-component-name="mdx"] {
   font-size: 18px !important; /* adjust this to your liking */
-  line-height: 1.5rem;
-  margin-top: 0;
+  line-height: 1.6rem;
+  margin-top: 0rem !important;
 }
 
 /* 2. Target everything EXCEPT headings and force them to inherit the base size */
@@ -237,9 +237,14 @@ h3.sidebar-title span {
   font-size: inherit !important;
 }
 
+.prose h2, .prose h3 {
+  margin-top: 0rem !important; /* Adds more "breathing room" before a new section starts */
+  margin-bottom: 0rem !important;
+}
+
 /* Heading overrides */
 #page-title {
-  display: none !important; /* Hides the page title from the page body but keeps it in the sidebar nav*/
+  display: none !important; /* Hides the page title from the page body but keeps it in the sidebar nav */
 }
 
 #page-title, /* The Main Page Title */
@@ -255,21 +260,21 @@ h3.sidebar-title span {
 .prose h1 span { 
   font-family: 'Amatic SC', cursive !important;
   font-weight: 700 !important;
-  font-size: 30px !important; 
+  font-size: 35px !important; 
 }
 
 .prose h2, 
 .prose h2 span { 
   font-family: 'Amatic SC', cursive !important;
   font-weight: 700 !important;
-  font-size: 24px !important; 
+  font-size: 26px !important; 
 }
 
 .prose h3, 
 .prose h3 span { 
   font-family: 'Amatic SC', cursive !important;
   font-weight: 700 !important;
-  font-size: 22px !important; 
+  font-size: 20px !important; 
 }
 
 /* Heading Sizes */
@@ -283,33 +288,36 @@ h1 {
 h2 { /* This is what's used in "cards" */
   font-size: 24px !important;
   font-weight: 500; /* Somehow this impacts the weight of ALL heading levels */
-  margin-top: 0.5rem; /* Distance between h2 and icon above */
-  margin-bottom: 0.5rem;
+  margin-top: 1rem; /* Distance between h2 and icon above */
+  margin-bottom: 0rem;
 }
 
-h3 { /* This afffects the sidebar headings; try not to use h3 in body text */
+h3 { /* This afffects the sidebar headings */
   font-family: 'Amatic SC' !important;
   font-size: 22px !important;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
 }
 
 /*-----------------------------------------------------------------------------------*/
 /* 06. Body content overrides
 /*-----------------------------------------------------------------------------------*/
 
+#content-area {
+  margin-left: auto !important;   /* Allows the content to shift left when there's a TOC on the right side of the page */
+  max-width: 850px !important;    /* Sets a consistent "wall" for everything to hit */
+  width: 100% !important;
+  padding-left: 3rem !important;  /* Adjust this to set the exact gap from the sidebar */
+}
+
 /* Increase vertical spacing between rows in CardGroups */
 .card-group, 
 [class*="CardGroup"] {
-  row-gap: 1.5rem !important; /* Default is usually 1.5rem or 2rem. 4rem provides a clear break. */
+  row-gap: 1.5rem !important;  /* Default is usually 1.5rem or 2rem. 4rem provides a clear break. */
+  margin-bottom: 1rem;
+  margin-top: 1rem !important;
 }
 
-/* Force the content area to use more of the screen in Wide Mode */
-#content-area, 
-#body-content .prose,
-main .prose {
-  max-width: 800px !important; /* This expands the "walls" of your page (which will make the columns wider) */
-  width: 100% !important;
-  padding-bottom: 2rem !important;
-}
 /* Ensure the CardGroup/Grid actually fills that new space */
 .card-group, 
 [class*="CardGroup"],
@@ -331,7 +339,7 @@ main .prose {
 /* Target the text area (prose) inside any callout */
 div.flex.gap-3 > div.prose,
 div.flex.gap-3 > div.callout-content {
-  margin-bottom: -1.75rem !important;
+  margin-bottom: 0rem !important;
 }
 
 /* Remove margin from the last element inside the text area */
@@ -343,6 +351,7 @@ div.prose > *:last-child {
 div.flex.gap-3 h2 {
   margin-top: 0 !important;
   padding-top: 0 !important;
+  margin-bottom: 0rem !important;
 }
 
 /*-----------------------------------------------------------------------------------*/
