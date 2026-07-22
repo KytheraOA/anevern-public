@@ -21,7 +21,7 @@ Contributions that will not be accetpted:
 
 ## How to Contribute
 
-* Check the [Style Guide](https://github.com/KytheraOA/anevern-public/blob/main/README.md#style-guide) first.
+* Check the [Style Guide](/STYLE_GUIDE.mdx) first.
 * Discussions: If you have questions, comments, or suggestions you'd like to discuss, start a new discussion: https://github.com/KytheraOA/anevern-public/discussions
 * Issues: Please open a new issue and assign it to [@KytheraOA](https://github.com/KytheraOA) here: https://github.com/KytheraOA/anevern-public/issues 
   * Use the `bug` label for site bugs (typos, broken links, missing images, etc.)
