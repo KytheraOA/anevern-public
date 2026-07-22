@@ -9,91 +9,16 @@ After years of dealing with WordPress, I'm in the process of rebuilding my site 
 
 ## Contributions
 
-Generally, this is a one-person operation. That said, I'm only one person and still human. 
- 
-See a bug? Have a suggestion? [Open an issue.](https://github.com/KytheraOA/anevern-public/issues) 🙏🏽
+Generally, this is a one-person operation. That said, I'm only one person and still human. See a bug? Have a suggestion? [Open an issue.](https://github.com/KytheraOA/anevern-public/issues) 🙏🏽
 
-## Style Guide
-
-### General
-
-I take a lot of liberties, but these are the foundation of how I write:
- * General style: [Chicago Manual of Style](https://www.chicagomanualofstyle.org/home.html)
-   * _Always_ use serial commas. I will die on this hill.
-   * Em dashes `—` are perfectly acceptable if not used in excess
-     * Em dash spacing is closed (no spaces): `just like this—no spaces—get it?`
- * Spelling: [Merriam-Webster](https://www.m-w.com/)
-   * For basic English, use M-W. For slang, dialects (including lolspeak), and intentional misspellings, use your best judgment.
-
-### Fonts
-* [Agdasima](https://fonts.google.com/specimen/Agdasima) for body text
-* [Amatic SC](https://fonts.google.com/specimen/Amatic+SC) for headings
-  * Use _italic_ (`_italic_`) for basic emphasis 
-  * Use **bold** (`**bold**`) to highlight key terms, references to UI elements, etc.
-    * Combining **_bold and italic_** is only acceptable in very rare instances that require extra emphasis
-  * Avoid <u>underline</u> (`<u>underline</u>`) since underlined text looks like a clickable link; reserve it for items that need extreme emphasis
-
-### Colors 
-
-These are the main colors used on the site: 
-* Purple: #8576c6 - Sidebar headings, link hover, link underline
-* Gray-400: #a2a2a4 - Body text color
-* Black, 35% transparency: rgba(0, 0, 0, 0.35) - Background color overlay (over backgroud image, behind text)
-* Dark Gray - #0b0b0f - Extra background color 
-
-These are extra colors I'm recording for reference: 
-<details>
-
-<summary><b>Click here to expand</b></summary>
-
-<ul>
-<li> #ffffff1a | rgb(255 255 255 / 10%)<br>
-<li> 00000080 | rgb(0 0 0 / 50%)<br>
-<li> #d1d5dc<br>
-<li> #f6f3f4<br>
-<li> #99a1af<br>
-<li> #747376 - text-gray-500<br>
-<li> #424244<br>
-<li> #4a5565<br>
-<li> #364153<br>
-<li> #29282b<br>
-</ul>
-</details>
-
-## Images
-
-* Use absolute URLs. All of my images are uploaded to my website. Using absolute URLs means the same images (and subdirectories) aren't regenerated every time I run `mintlify export`.
-* Use `<CardGroup cols={3}>` to organize galleries into rows with 3 columns (remember to include `</CardGroup>` after the last image in the gallery)
-  * There are exceptions. If it would work well to have wider images, break the gallery into sections by closing one `<CardGroup>` block and starting another.
-
-### Gallery images
-
-Use the Mintlify `<Frame>` [component](https://www.mintlify.com/docs/components/frames) for gallery entries:
-
-```markdown
-  <Frame caption="**Title** (YYYY)">
-    <img src="http://absolute.url" alt="..." />
-  </Frame>
-```
-
-* Use the `caption` property for the title of the image, followed by a line break `<br>`, then the creation year in parentheses. 
-  * Example: `<Frame caption="**Make Good Trouble**<br>(2025)">`
-  * Add bold formatting to the title. 
-  * Leave the year unbolded (e.g., ) _unless_ the year is part of the title (e.g., `<Frame caption="**Pride 2026**">`)
-  * Optional: If there is additional commentary, add a line break after the year and italicize the commentary (`<Frame caption="**To Whom it's About to Concern**<br>(2024)<br>_This was inspired by the meme to the right_... ☞" >`)
+> [!NOTE] 
+> See also: 
+> * [Contributing](/CONTRIBUTING.md)
+> * [Style Guide](/STYLE_GUIDE.md)
+> * [Code of Conduct](/CODE_OF_CONDUCT.md)
 
 ## Workflow
 
-I've had questions about my workflow, so I'll break it down here. ^_^
+I use a custom Rovo agent to help me with the `style.css` file that customizes the look and feel of my website, which is otherwise built with Mintlify, then exported as a static site and uploaded to my webhost.
 
-<Steps>
-  <Step title="Sign up with Mintlify">
-    Go to https://www.mintlify.com/ and sign up. The [Starter](https://www.mintlify.com/pricing) plan is free, and really is enough to get started.
-  </Step>
-  <Step title="Dashboard">
-    Once you sign up, you can start building a site in the Dashboard. 
-  </Step>
-  <Step title="Third Step">
-    These are instructions or content that only pertain to the third step.
-  </Step>
-</Steps>
+For a detailed examination of my process, check out this blog post: https://documentation-czar.atlassian.net/wiki/x/B4CdJQ
