@@ -13,9 +13,9 @@ Generally, this is a one-person operation. That said, I'm only one person and st
 
 > [!NOTE] 
 > See also: 
-> * [Contributing](/CONTRIBUTING.md)
-> * [Style Guide](/STYLE_GUIDE.md)
-> * [Code of Conduct](/CODE_OF_CONDUCT.md)
+> * [Contributing](CONTRIBUTING.md)
+> * [Style Guide](STYLE_GUIDE.mdx)
+> * [Code of Conduct](CODE_OF_CONDUCT.md)
 
 ## Workflow
 
