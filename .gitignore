@@ -1,16 +1,27 @@
-# WIP, reference, and other stuff not part of my website
+# WIP, reference, and other stuff not part of my website #
+##########################################################
 .archive/
 .vscode/
-.work-in-progress/
-deploy.sh
-deploy-instructions.mdx
+.reference/
+*_WIP_*
 
-# Ignore Mac-specific .DS_Store files
-*.DS_Store
+# Ignore OS-generated .DS_Store files #
+#######################################
+.DS_Store
+.DS_Store?
+._*
 
-# Ignore files stored in CDN [local storage is included for easy reference]
+# Ignore files stored in CDN [local storage is included for easy reference] #
+#############################################################################
 images/
 
-# Ignore self
+# Ignore self #
+###############
 .gitignore
 .mintignore
+
+# mintignore-specific (stuff that doesn't need to be compiled in the SSG build #
+################################################################################
+README.md
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md

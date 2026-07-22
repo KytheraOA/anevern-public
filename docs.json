@@ -29,16 +29,6 @@
     "dark": "#8576c6"
   },
   "favicon": "/favicon.svg",
-    "redirects": [
-    {
-      "source": "/etc/discord",
-      "destination": "https://discord.gg/kDDBW25mcC"
-    },
-    {
-      "source": "/etc/bluesky",
-      "destination": "https://bsky.app/profile/kythera.bsky.social"
-    }
-  ],
   "navigation": {
     "groups": [
       {

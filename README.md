@@ -81,3 +81,19 @@ Use the Mintlify `<Frame>` [component](https://www.mintlify.com/docs/components/
   * Add bold formatting to the title. 
   * Leave the year unbolded (e.g., ) _unless_ the year is part of the title (e.g., `<Frame caption="**Pride 2026**">`)
   * Optional: If there is additional commentary, add a line break after the year and italicize the commentary (`<Frame caption="**To Whom it's About to Concern**<br>(2024)<br>_This was inspired by the meme to the right_... ☞" >`)
+
+## Workflow
+
+I've had questions about my workflow, so I'll break it down here. ^_^
+
+<Steps>
+  <Step title="Sign up with Mintlify">
+    Go to https://www.mintlify.com/ and sign up. The [Starter](https://www.mintlify.com/pricing) plan is free, and really is enough to get started.
+  </Step>
+  <Step title="Dashboard">
+    Once you sign up, you can start building a site in the Dashboard. 
+  </Step>
+  <Step title="Third Step">
+    These are instructions or content that only pertain to the third step.
+  </Step>
+</Steps>

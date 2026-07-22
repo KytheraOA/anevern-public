@@ -238,20 +238,15 @@ h3.sidebar-title span {
 }
 
 .prose h2, .prose h3 {
-  margin-top: 0rem !important; /* Adds more "breathing room" before a new section starts */
-  margin-bottom: 0rem !important;
-}
-
-/* Heading overrides */
-#page-title {
-  display: none !important; /* Hides the page title from the page body but keeps it in the sidebar nav */
+  margin-top: 0.5rem !important; /* Adds more "breathing room" before a new section starts */
+  margin-bottom: 0.5rem !important;
 }
 
 #page-title, /* The Main Page Title */
 .prose h1 {
   font-family: 'Amatic SC', cursive !important;
   font-weight: 700 !important;
-  font-size: 30px !important;
+  font-size: 35px !important;
   text-transform: none !important;
 }
 
@@ -295,13 +290,18 @@ h2 { /* This is what's used in "cards" */
 h3 { /* This afffects the sidebar headings */
   font-family: 'Amatic SC' !important;
   font-size: 22px !important;
-  margin-top: 2rem;
+  margin-top: 0rem;
   margin-bottom: 0rem;
 }
 
 /*-----------------------------------------------------------------------------------*/
 /* 06. Body content overrides
 /*-----------------------------------------------------------------------------------*/
+
+/* When this empty div exists on a page, hide the header above it */
+#content-area:has(.hide-header-globally) header {
+  display: none !important;
+}
 
 #content-area {
   margin-left: auto !important;   /* Allows the content to shift left when there's a TOC on the right side of the page */
