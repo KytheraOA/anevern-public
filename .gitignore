@@ -3,7 +3,6 @@
 .archive/
 .vscode/
 .reference/
-deploy.sh
 
 # Ignore OS-generated .DS_Store files #
 #######################################

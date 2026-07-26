@@ -1,7 +1,7 @@
 
 ## What is this?
 
-Hey! If you see this, you're poking around the docs-as-code repository for my persional website.
+Hey! If you see this, you're poking around the docs-as-code repository for my persional website, located at https://www.anevern.com/.
 
 ### Becoming docs-as-code
 
