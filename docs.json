@@ -35,12 +35,14 @@
         "group": " ",
         "pages": [
           "index",
+          "updates",
           "etc/about"
         ]
       },
       {
         "group": "Artwork",
         "pages": [
+          "/galleries/",
           "/galleries/crow-and-gargoyle",
           "/galleries/fantasy-art",
           "/galleries/fan-art",

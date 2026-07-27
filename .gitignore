@@ -3,6 +3,9 @@
 .archive/
 .vscode/
 .reference/
+blog/
+updates.mdx
+snippets/latest-update.mdx
 
 # Ignore OS-generated .DS_Store files #
 #######################################
