@@ -3,6 +3,7 @@
 To keep the style, tone, and formatting of my site consistent, I use this as my style guide.
 
 ## General
+
 I take a lot of liberties, but these are the foundation of how I write:
  * General style: [Chicago Manual of Style](https://www.chicagomanualofstyle.org/home.html)
    * _Always_ use serial commas. I will die on this hill.
@@ -12,6 +13,7 @@ I take a lot of liberties, but these are the foundation of how I write:
    * For basic English, use M-W. For slang, dialects (including lolspeak), and intentional misspellings, use your best judgment.
 
 ## Fonts
+
 * [Agdasima](https://fonts.google.com/specimen/Agdasima) for body text
 * [Amatic SC](https://fonts.google.com/specimen/Amatic+SC) for headings
   * Use _italic_ (`_italic_`) for basic emphasis 
