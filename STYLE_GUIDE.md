@@ -69,3 +69,19 @@ Use the Mintlify `<Frame>` [component](https://www.mintlify.com/docs/components/
   * Add bold formatting to the title. 
   * Leave the year unbolded (e.g., ) _unless_ the year is part of the title (e.g., `<Frame caption="**Pride 2026**">`)
   * Optional: If there is additional commentary, add a line break after the year and italicize the commentary (`<Frame caption="**To Whom it's About to Concern**<br>(2024)<br>_This was inspired by the meme to the right_... ☞" >`)
+
+## Glossary (Word List)
+
+List of characters, places, and other things. Recorded here for consistency (and additional context for the things).
+
+* **Anevern**
+  * Proper noun. Imaginary location. Used both as a specific location and general reference for the "world" certain original characters come from.
+
+* **Crow (character)**
+  * Proper noun _only_ when referring to the eponymous crow of "[Crow & Gargoyle](https://www.anevern.com/galleries/crow-and-gargoyle/)". They/them pronouns.
+  * Examples: "Gary's best friend is a crow." "This is Crow. They are a crow."
+  * Characterization: Too smart for their own good. Seems serious and stuffy, but is in fact very silly and cares deeply about their friends.
+
+* **Gary**
+  * Proper noun. Gary is a gargoyle. They are agender and use they/then pronouns. Eponymous gargoyle of "[Crow & Gargoyle](https://www.anevern.com/galleries/crow-and-gargoyle/)".
+  * Characterization: Not the brightest bulb in the marquee, but not _stupid_, either. High <a href="https://www.dndbeyond.com/sources/dnd/br-2024/playing-the-game#TheSixAbilities">INT</a>, low <a href="https://www.dndbeyond.com/sources/dnd/br-2024/playing-the-game#TheSixAbilities">WIS</a>. Sometimes has difficulty pronouncing certain words, like "potato" (always "portato").
