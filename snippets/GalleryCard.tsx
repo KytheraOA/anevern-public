@@ -3,8 +3,10 @@ interface GalleryItem {
   title: string;
   image: string;
   alt?: string;
-  media: string;
   date: string;
+  media: string;
+  description?: string;
+  focalPoint?: 'top' | 'center' | 'bottom' | 'left' | 'right';
 }
 interface GalleryCardProps {
   items: GalleryItem[];
@@ -50,19 +52,25 @@ const GalleryCard: React.FC<GalleryCardProps> = ({ items }) => {
         {items.map((item: GalleryItem, index: number) => (
           <div 
             key={index} 
-            className="gallery-card group cursor-pointer not-prose relative rounded-2xl overflow-hidden transition-all"
+            className="gallery-card group cursor-pointer not-prose relative rounded-2xl overflow-hidden transition-all bg-white/5 p-3 border border-white/10"
             onClick={(e) => openLightbox(index, e)}
           >
             <div className="aspect-[4/3] overflow-hidden">
               <img 
                 src={item.image} 
                 alt={item.alt || item.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: item.focalPoint || 'center' }}
               />
             </div>
             <div className="p-4">
               <h3 className="text-lg font-semibold m-0 text-white">{item.title}</h3>
-              <p className="text-sm opacity-70 m-0 text-gray-400">{item.media} • {item.date}</p>
+              <p className="text-sm opacity-70 m-0 text-gray-400">{item.date} • {item.media}</p>
+              {item.description && (
+                <p className="text-sm mt-2 text-gray-400 line-clamp-2 leading-none">
+                  {item.description}
+                </p>
+              )}
             </div>
           </div>
         ))}
@@ -155,3 +163,5 @@ const GalleryCard: React.FC<GalleryCardProps> = ({ items }) => {
 };
 
 export default GalleryCard;
+
+/* This component was created using Atlassian Rovo. License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/ */

@@ -41,7 +41,7 @@
       {
         "group": "Artwork",
         "pages": [
-          "galleries",
+          "galleries/index",
           "galleries/crow-and-gargoyle",
           "galleries/fantasy-art",
           "galleries/fan-art",

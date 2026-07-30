@@ -31,7 +31,6 @@ These are the main colors used on the site:
 
 These are extra colors I'm recording for reference: 
 <details>
-
 <summary><b>Click here to expand</b></summary>
 
 <ul>
@@ -48,27 +47,74 @@ These are extra colors I'm recording for reference:
 </ul>
 </details>
 
-## Images
+## `GalleryCard` Component
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)  
 
-* Use absolute URLs. All of my images are uploaded to my website. Using absolute URLs means the same images (and subdirectories) aren't regenerated every time I run `mintlify export`.
-* Use `<CardGroup cols={3}>` to organize galleries into rows with 3 columns (remember to include `</CardGroup>` after the last image in the gallery)
-  * There are exceptions. If it would work well to have wider images, break the gallery into sections by closing one `<CardGroup>` block and starting another.
+I used [Rovo](https://www.atlassian.com/software/rovo) to help me build a React component for this: `GalleryCard.tsx`. This creates a responsive grid with 3 columns of gallery "cards" with adjustable thumbnail images. Images open in a lightbox that includes the image metadata, with back, next, and close buttons.
 
-### Gallery images
-
-Use the Mintlify `<Frame>` [component](https://www.mintlify.com/docs/components/frames) for gallery entries:
-
-```CSS
-  <Frame caption="**Title** (YYYY)">
-    <img src="http://absolute.url" alt="..." />
-  </Frame>
+* Import the component on a gallery page (immediately below the frontmatter, before the page content) with `import GalleryCard from '/snippets/GalleryCard.tsx';`
+* To start a new gallery grid, use:
+```mdx
+<GalleryCard 
+  items={[
+    ... //Add all the items here
+  ]} 
+/>
 ```
 
-* Use the `caption` property for the title of the image, followed by a line break `<br>`, then the creation year in parentheses. 
-  * Example: `<Frame caption="**Make Good Trouble**<br>(2025)">`
-  * Add bold formatting to the title. 
-  * Leave the year unbolded (e.g., ) _unless_ the year is part of the title (e.g., `<Frame caption="**Pride 2026**">`)
-  * Optional: If there is additional commentary, add a line break after the year and italicize the commentary (`<Frame caption="**To Whom it's About to Concern**<br>(2024)<br>_This was inspired by the meme to the right_... ☞" >`)
+* Here's the template to use for gallery items:
+```mdx
+{
+  title: string;
+  image: string;
+  alt: string;
+  date: string;
+  media: string;
+  description: string;
+  focalPoint: 'top' | 'center' | 'bottom' | 'left' | 'right';
+}
+```
+
+* `description` and `focalPoint` are optional.
+* `focalPoint` accepts `'top'`, `'center'`, `'bottom'`, `'left'`, `'right'` and `'X% y%'`
+
+<details>
+<summary>How to use `focalPoint` percentage...</summary>
+
+The `focalPoint` value accepts two percentages: `"X% Y%"` where:
+* X% = horizontal position (0% = far left, 50% = center, 100% = far right)
+* Y% = vertical position (0% = very top, 50% = center, 100% = very bottom)
+
+**Example:**
+* `"50% 20%"` — center horizontally, near the top
+* `"30% 50%"` — slightly left of center, halfway down
+* `"50% 80%"` — center horizontally, near the bottom
+
+**Sample code:**
+```TS
+{
+  title: "Portrait",
+  image: "/images/portrait.jpg",
+  media: "Ink",
+  date: "2024",
+  focalPoint: "50% 20%"  // Center horizontally, near the top
+}
+```
+
+**Cheat sheet:**
+| Subject position    | `focalPoint` value |
+| ---------------------| --------------------|
+| Top center          | "50% 10%"          |
+| Top left            | "20% 10%"          |
+| Middle center       | "50% 50%"          |
+| Bottom center       | "50% 90%"          |
+| Face in upper third | "50% 25%"          |
+</details>
+
+A page can have multiple gallery grids (e.g., to break it into sections with headings). The back/next navigation buttons will go through every image on the page, uninterrupted by the breaks. 
+
+> [!NOTE] 
+> The gallery grid will _always_ be left-aligned, so a row with 1 or 2 images instead of 3 will be left-aligned.
 
 ## Glossary (Word List)
 
