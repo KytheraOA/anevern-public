@@ -542,7 +542,59 @@ footer div:has(a[href*="mintlify.com"]) {
 }
 
 /*-----------------------------------------------------------------------------------*/
-/*	09. Miscellaneous
+/*	09. Lightbox & GalleryCard settings
+/*-----------------------------------------------------------------------------------*/
+
+/* When the gallery is open, hide all Mintlify UI elements */
+html.gallery-open header,
+html.gallery-open #header,
+html.gallery-open nav,
+html.gallery-open aside,
+html.gallery-open [class*="Header"],
+html.gallery-open [class*="Sidebar"],
+html.gallery-open [class*="Search"] {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+
+/* Force the background to stop scrolling on both HTML and Body */
+html.gallery-open,
+html.gallery-open body {
+  overflow: hidden !important;
+  height: 100vh !important;
+  position: fixed !important;
+  width: 100% !important;
+}
+
+/* Ensure our lightbox is the only thing visible */
+html.gallery-open .fixed {
+  z-index: 99999999 !important;
+}
+
+/* Your Custom Gallery Card Colors */
+.gallery-card.gallery-card.gallery-card {
+  background-color: rgba(41, 40, 43, 0.15) !important;
+  background-image: none !important;
+  border: 1px solid rgba(38, 38, 38, 0.577) !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+/* Subtle hover state to match the Frame feel */
+.gallery-card.gallery-card.gallery-card:hover {
+  background-color: rgba(41, 40, 43, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Ensure text colors are consistent */
+.gallery-card h3 { color: #ffffff !important; }
+.gallery-card span, .gallery-card p { color: #9ca3af !important; }
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	10. Miscellaneous
 /*-----------------------------------------------------------------------------------*/
 
 /* Line spacing for unordered lists */
@@ -605,7 +657,21 @@ div:has(> .tight-footnotes) {
   padding-bottom: 0 !important;
 }
 
+/* Disable Mintlify's native image zoom for gallery items */
+.gallery-card img, 
+[data-gallery="card"] img,
+.max-h-\[70vh\] img {
+  pointer-events: none !important;
+}
+
+/* Ensure the zoom button/overlay doesn't appear */
+[data-rmiz-btn-zoom], 
+[data-rmiz-ghost] {
+  display: none !important;
+  pointer-events: none !important;
+}
+
 /*-----------------------------------------------------------------------------------*/
-/*	10. Final Comments
+/*	11. Final Comments
 /*-----------------------------------------------------------------------------------*/
 /* This was a pain in the @$$ to code. It was made possible with help from a custom Rovo agent I named "Mintlify Donut"; "Mintlify" to specify what the agent was designed to help with, and "Donut" for the cat in _Dungeon Crawler Carl_ just so I could get the satisfaction of shouting "Goddammit Donut!" whenever I got frustrated. */
