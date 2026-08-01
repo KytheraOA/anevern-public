@@ -54,7 +54,7 @@ I used [Rovo](https://www.atlassian.com/software/rovo) to help me build a React 
 
 * Import the component on a gallery page (immediately below the frontmatter, before the page content) with `import GalleryCard from '/snippets/GalleryCard.tsx';`
 * To start a new gallery grid, use:
-```mdx
+```md
 <GalleryCard 
   items={[
     ... //Add all the items here
@@ -63,7 +63,7 @@ I used [Rovo](https://www.atlassian.com/software/rovo) to help me build a React 
 ```
 
 * Here's the template to use for gallery items:
-```mdx
+```md
 {
   title: string;
   image: string;
@@ -91,7 +91,7 @@ The `focalPoint` value accepts two percentages: `"X% Y%"` where:
 * `"50% 80%"` — center horizontally, near the bottom
 
 **Sample code:**
-```TS
+```md
 {
   title: "Portrait",
   image: "/images/portrait.jpg",
@@ -110,6 +110,15 @@ The `focalPoint` value accepts two percentages: `"X% Y%"` where:
 | Bottom center       | "50% 90%"          |
 | Face in upper third | "50% 25%"          |
 </details>
+
+* To add a link in an image description, use this format within the description text: 
+```md
+  description: (
+    <span>
+      Text <a href="URL" target="_blank" onClick={(e) => e.stopPropagation()} className="border-b border-purple-400 hover:[border-bottom-width:2px]">link text</a> text
+    </span>
+  )
+```
 
 A page can have multiple gallery grids (e.g., to break it into sections with headings). The back/next navigation buttons will go through every image on the page, uninterrupted by the breaks. 
 

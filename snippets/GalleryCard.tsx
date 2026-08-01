@@ -65,12 +65,16 @@ const GalleryCard: React.FC<GalleryCardProps> = ({ items }) => {
             </div>
             <div className="p-4">
               <h3 className="text-lg font-semibold m-0 text-white">{item.title}</h3>
-              <p className="text-sm opacity-70 m-0 text-gray-400">{item.date} • {item.media}</p>
-              {item.description && (
-                <p className="text-sm mt-2 text-gray-400 line-clamp-2 leading-none">
-                  {item.description}
-                </p>
-              )}
+                <div className="flex flex-col -space-y-1"> {/* Adjust the -1 to -2 if needed */}
+                  <p className="text-sm opacity-70 m-0 text-gray-400">
+                    {item.date} • {item.media}
+                  </p>
+                </div>
+                {item.description && (
+                  <div className="text-sm mt-2 text-gray-400 leading-none not-prose">
+                    {item.description}
+                  </div>
+                )}
             </div>
           </div>
         ))}
@@ -141,7 +145,7 @@ const GalleryCard: React.FC<GalleryCardProps> = ({ items }) => {
                   {items[selectedIndex]?.title}
                 </h2>
                 <p className="text-white/60 mt-1 text-base md:text-lg m-0">
-                  {items[selectedIndex]?.media} • {items[selectedIndex]?.date}
+                  {items[selectedIndex]?.date} • {items[selectedIndex]?.media}
                 </p>
               </div>
 
