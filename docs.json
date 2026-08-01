@@ -24,7 +24,7 @@
     "library": "fontawesome"
   },
   "colors": {
-    "primary": "#8576c6",
+    "primary": "#52419c",
     "light": "#8576c6",
     "dark": "#8576c6"
   },
@@ -41,14 +41,14 @@
       {
         "group": "Artwork",
         "pages": [
-          "/galleries/",
-          "/galleries/crow-and-gargoyle",
-          "/galleries/fantasy-art",
-          "/galleries/fan-art",
-          "/galleries/sca",
-          "/galleries/sketchbook",
-          "/galleries/miniatures",
-          "/galleries/published-work"
+          "galleries/index",
+          "galleries/crow-and-gargoyle",
+          "galleries/fantasy-art",
+          "galleries/fan-art",
+          "galleries/sca",
+          "galleries/sketchbook",
+          "galleries/miniatures",
+          "galleries/published-work"
         ]
       },
       {

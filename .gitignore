@@ -6,6 +6,8 @@
 00-NOTE-TO-SELF.mdx
 updates.mdx
 snippets/latest-update.mdx
+00-GalleryCard-reference.mdx
+00-reference.mdx
 
 # Ignore OS-generated .DS_Store files #
 #######################################
@@ -20,3 +22,9 @@ images/
 # Ignore .mintignore (tells Mintlify which files NOT to include in SSG builds) #
 ################################################################################
 .mintignore
+
+# Mysterious stuff? #
+#####################
+node_modules/
+package-lock.json
+package.json
