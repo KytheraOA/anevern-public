@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "About the Artist"
 sidebarTitle: "About"
 icon: "circle-info"
 hideFooterPagination: true
@@ -7,32 +7,30 @@ mode: "wide"
 noindex: true
 ---
 
-<div className="hide-header-globally" />
-
-<div className="flex flex-row-reverse items-start justify-between gap-8">
-  <img
-    src="https://www.anevern.com/images/garg-and-garg.jpg"
-    style={{ width: "300px", height: "auto", border: "1px solid black" }}
-    className="rounded-lg mb-4"
-    noZoom
-    alt="Photograph of the artist standing in front of a bronze gargoyle statue at the Texas Renaissance Faire" />
-  <div className="flex-1">
-
-# About the Artist
-
-Kythera of Anevern is lifelong artist specializing in fantasy art, especially gargoyles and other misunderstood monsters. <br/>
-<br/>
-Author of _Drawing Made Easy: Dragons & Fantasy_ from Walter Foster Publishing. She currently shares an apartment in Houston, TX with the feline equivalent of Pinky & the Brain.
-
-<div className="flex items-center gap-2 mt-0">
-  <img 
-    src="https://www.anevern.com/images/No-Ai-icon.png" 
-    className="w-[36px] h-[30px] block"
-    alt="No AI Icon"
-  />
-  <span>**NO GEN-AI!** All of the writing and artwork on this site was created by hand by a real human.</span>
-</div>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start not-prose">
+  <div>
+    <p className="text-lg text-[#a2a2a4] leading-relaxed">
+      Kythera of Anevern is lifelong artist specializing in fantasy art, especially gargoyles and other misunderstood monsters.
+    </p>
+    <p className="text-lg text-[#a2a2a4] mt-4 leading-relaxed">
+      Author of _Drawing Made Easy: Dragons & Fantasy_ from Walter Foster Publishing. She currently shares an apartment in Houston, TX with the feline equivalent of Pinky & the Brain.
+    </p>
+    <div className="flex items-center gap-2 mt-4">
+      <img 
+        src="https://www.anevern.com/images/No-Ai-icon.png" 
+        className="w-[40px] h-[40px] block"
+        noZoom
+        alt="No AI Icon"
+      />
+      <span className="text-[#a2a2a4]">**NO GEN-AI!** All of the writing and artwork on this site was created by hand by a real human.</span>
+    </div>
   </div>
+  <img 
+    src="https://www.anevern.com/images/garg-and-garg.jpg" 
+    alt="Photograph of the artist standing in front of a bronze gargoyle statue at the Texas Renaissance Faire"
+    className="rounded-xl border border-[#8576c6] shadow-lg"
+    style={{ borderColor: '#8576c6' }}
+  />
 </div>
 
 <Callout type="info" icon="circle-info" className="align-icon-callout">
