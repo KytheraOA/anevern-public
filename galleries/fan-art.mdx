@@ -5,7 +5,7 @@ icon: "road-barrier"
 mode: "wide"
 noindex: true
 ---
-import GalleryCard from '/snippets/GalleryCard.tsx';
+import { GalleryCard } from '/snippets/GalleryCard.tsx';
 
 Artwork based on characters from TV shows, movies, video games, comics, etc. Divided into sections by topic. Use the tabs below to switch between sections.
 
@@ -503,7 +503,7 @@ Fan art inspired by movies, comics, and other media.
         <span>
           Marlowe the Monster from the comic by <a href="https://shingkhor.com/" target="_blank" onClick={(e) => e.stopPropagation()} className="border-b border-[#8576c6] hover:[border-bottom-width:2px]">Shing Yin Khor</a>
         </span>
-      ),
+        ),
       focalPoint: "50% 10%"
     },
     {
@@ -533,14 +533,6 @@ Fan art inspired by movies, comics, and other media.
       description: "Lord of Darkness from 'Legend'",
       focalPoint: "50% 10%"
     },
-    {
-      title: "Title",
-      image: "https://www.anevern.com/images/fan-art/",
-      alt: "",
-      date: "20XX",
-      media: "TBD",
-      description: "Placeholder"
-    }
   ]}
 />
 
