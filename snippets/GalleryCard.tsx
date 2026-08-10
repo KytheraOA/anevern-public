@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from 'react';
+// This tells TypeScript that these hooks exist globally in Mintlify's environment
+declare const useState: any;
+declare const useEffect: any;
+
 interface GalleryItem {
   title: string;
   image: string;
@@ -8,27 +11,37 @@ interface GalleryItem {
   description?: string;
   focalPoint?: 'top' | 'center' | 'bottom' | 'left' | 'right';
 }
+
 interface GalleryCardProps {
   items: GalleryItem[];
 }
-const GalleryCard: React.FC<GalleryCardProps> = ({ items }) => {
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const openLightbox = (index: number, e: React.MouseEvent) => {
+
+export const GalleryCard = ({ items }: GalleryCardProps) => {
+  // TypeScript will infer the type from the initial value (null).
+  const [selectedIndex, setSelectedIndex] = useState(null);
+  const openLightbox = (index: number, e: any) => {
     e.preventDefault();
     setSelectedIndex(index);
   };
-  const closeLightbox = (e?: React.MouseEvent | React.KeyboardEvent) => {
+  const closeLightbox = (e?: any) => {
     if (e && 'stopPropagation' in e) e.stopPropagation();
     setSelectedIndex(null);
   };
-  const showNext = (e?: React.MouseEvent) => {
+  const showNext = (e?: any) => {
     if (e) e.stopPropagation();
-    setSelectedIndex((prev) => (prev !== null ? (prev + 1) % items.length : null));
+    // Use a standard function instead of an arrow function for 'prev' 
+    // to avoid the implicit 'any' error in this specific sandbox.
+    setSelectedIndex(function(prev: any) {
+      return prev !== null ? (prev + 1) % items.length : null;
+    });
   };
-  const showPrev = (e?: React.MouseEvent) => {
+  const showPrev = (e?: any) => {
     if (e) e.stopPropagation();
-    setSelectedIndex((prev) => (prev !== null ? (prev - 1 + items.length) % items.length : null));
+    setSelectedIndex(function(prev: any) {
+      return prev !== null ? (prev - 1 + items.length) % items.length : null;
+    });
   };
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') closeLightbox();
@@ -65,7 +78,7 @@ const GalleryCard: React.FC<GalleryCardProps> = ({ items }) => {
             </div>
             <div className="p-4">
               <h3 className="text-lg font-semibold m-0 text-white">{item.title}</h3>
-                <div className="flex flex-col -space-y-1"> {/* Adjust the -1 to -2 if needed */}
+                <div className="flex flex-col -space-y-1">
                   <p className="text-sm opacity-70 m-0 text-gray-400">
                     {item.date} • {item.media}
                   </p>
@@ -103,12 +116,10 @@ const GalleryCard: React.FC<GalleryCardProps> = ({ items }) => {
           }}
           onClick={() => closeLightbox()}
         >
-          {/* Main Content Container */}
           <div 
             className="w-full max-w-[95vw] max-h-[95vh] flex flex-col items-center justify-between py-4"
             onClick={(e) => e.stopPropagation()} 
           >
-            {/* Close Button - Now at the top of the container */}
             <div className="w-full flex justify-end px-4 mb-2">
               <button 
                 onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
@@ -121,14 +132,12 @@ const GalleryCard: React.FC<GalleryCardProps> = ({ items }) => {
               </button>
             </div>
 
-            {/* The Artwork - max-h adjusted to leave room for top/bottom UI */}
             <img 
               src={items[selectedIndex]?.image} 
               alt={items[selectedIndex]?.alt || items[selectedIndex]?.title}
               className="max-w-full max-h-[70vh] object-contain shadow-2xl rounded-md"
             />
             
-            {/* Navigation & Metadata Bar */}
             <div className="mt-4 flex items-center justify-between w-full max-w-2xl px-4">
               <button 
                 onClick={showPrev}
@@ -165,7 +174,3 @@ const GalleryCard: React.FC<GalleryCardProps> = ({ items }) => {
     </div>
   );
 };
-
-export default GalleryCard;
-
-/* This component was created using Atlassian Rovo. License: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/ */

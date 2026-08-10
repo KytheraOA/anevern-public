@@ -611,7 +611,7 @@ ul li {
 }
 
 /* Completely hide the search bar and its container */
-/* It would be nice if my site had its own search function, but that's not what this is. */
+/* Rationalle: Mintlify's built-in search functionality is part of their cloud-based service. Since I'm running my site as a static build hosted elsewhere, the built-in search function won't work properly. */
 #search-bar-entry,
 #search-bar-entry-mobile,
 .search-container,
