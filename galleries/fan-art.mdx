@@ -1,26 +1,23 @@
 ---
 title: "Fan Art Gallery"
 sidebarTitle: "Fan Art"
-icon: "road-barrier"
 mode: "wide"
 noindex: true
 ---
 import { GalleryCard } from '/snippets/GalleryCard.tsx';
 
-Artwork based on characters from TV shows, movies, video games, comics, etc. Divided into sections by topic. Use the tabs below to switch between sections.
-
-<div className="max-w-lg ">
-  <Card title="Under Construction" type="warning" className="flex flex-col">
-    I'm still rebuilding this page. 😅<br/> In the meantime, you can find my work on <Icon icon="paw" iconType="solid" /> [Fur Affinity](https://www.furaffinity.net/user/kytheraoa).
-    <img 
-      src="https://www.anevern.com/images/ui-elements/404.jpg" 
-      className="rounded-md mt-4 w-full"
-      style={{ border: "1px solid rgb(113, 63, 18)" }}
-      noZoom
-      alt="A Bengal cat wearing a tiny mushroom hat. The image says 'princess in nother castle sry'"
-    />
-  </Card>
+<div className="ml-6 -m-5">
+  <span 
+    className="mono-force uppercase text-xs" 
+    style={{ 
+      color: '#71717a' 
+    }}
+  >
+    Last update: {new Date().toISOString().replace('T', ' ').split('.')[0]} UTC
+  </span>
 </div>
+
+Artwork based on characters from TV shows, movies, video games, comics, etc. Divided into sections by topic. Use the tabs below to switch between sections.
 
 <Tabs>
   <Tab title="Gargoyles" icon="shield-cat">

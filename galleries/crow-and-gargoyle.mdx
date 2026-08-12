@@ -5,6 +5,17 @@ noindex: true
 ---
 import { GalleryCard } from '/snippets/GalleryCard.tsx';
 
+<div className="ml-6 -m-5">
+  <span 
+    className="mono-force uppercase text-xs" 
+    style={{ 
+      color: '#71717a' 
+    }}
+  >
+    Last update: {new Date().toISOString().replace('T', ' ').split('.')[0]} UTC
+  </span>
+</div>
+
 "Crow & Gargoyle" are two original characters that began life as a series of silly sketches to cheer up a friend. As often happens with characters, they quickly took on a life of their own and grew far beyond their original purpose (which they served more than adequately). 
 
 Crow (they/them) is an American crow (_Corvus brachyrhynchos_). The gargoyle is Gary (they/them), named because the autocorrect function of my friend's phone kept changing "garg" to "Gary." Gary has also become my mascot; something else I didn't originally plan, but it works!
@@ -75,12 +86,7 @@ Crow (they/them) is an American crow (_Corvus brachyrhynchos_). The gargoyle is 
       date: "2024",
       media: "Clip Studio Paint",
       description: "Hurricane Helene relief fundraiser sticker design"
-    }
-  ]} 
-/>
-
-<GalleryCard 
-  items={[
+    },
     {
       title: "Walkies!",
       image: "https://www.anevern.com/images/crow-and-gargoyle/walkies-72wm.png",
@@ -95,12 +101,8 @@ Crow (they/them) is an American crow (_Corvus brachyrhynchos_). The gargoyle is 
       alt: "Screenshot of a series of comments on Tumblr. sailoruranus-archive quotes 'Pet crows give their owners names. This is identified by a unique sound they make around specific people that they would not otherwise make.' and says 'oh my GOD'. jackhawksmoor says 'well shit'. ambular-d concludes 'Clearly, to the crows, we're the pets.'",
       date: "Unknown",
       media: "Meme",
-    }
-  ]} 
-/>
-
-<GalleryCard 
-  items={[
+      description: "⬅️ This meme inspired the previous image",
+    },
     {
       title: "To Whom it's About to Concern",
       image: "https://www.anevern.com/images/crow-and-gargoyle/about-to-concern-72wm.png",
@@ -115,12 +117,8 @@ Crow (they/them) is an American crow (_Corvus brachyrhynchos_). The gargoyle is 
       alt: "Screenshot of a tweet by @Will_Donnelly. The text of the meme reads 'To Whom It May Concern,' -boring -cliche -devoid of real meaning 'To Whom It's About to Concern,' -exciting -innovative -a call to action'",
       date: "Unknown",
       media: "Meme",
-    }
-  ]} 
-/>
-
-<GalleryCard 
-  items={[
+      description: "⬅️ This meme inspired the previous image",
+    },
     {
       title: "Peaceful, Not Harmless",
       image: "https://www.anevern.com/images/crow-and-gargoyle/peaceful-not-harmless-72wm.png",

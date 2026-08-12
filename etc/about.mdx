@@ -6,6 +6,17 @@ hideFooterPagination: true
 mode: "wide"
 noindex: true
 ---
+<div className="ml-6 -m-5">
+  <span 
+    className="mono-force uppercase text-xs" 
+    style={{ 
+      color: '#71717a' 
+    }}
+  >
+    Last update: {new Date().toISOString().replace('T', ' ').split('.')[0]} UTC
+  </span>
+</div>
+<br />
 
 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start not-prose">
   <div>

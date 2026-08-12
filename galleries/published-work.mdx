@@ -7,19 +7,18 @@ noindex: true
 ---
 import { GalleryCard } from '/snippets/GalleryCard.tsx';
 
+<div className="ml-6 -m-5">
+  <span 
+    className="mono-force uppercase text-xs" 
+    style={{ 
+      color: '#71717a' 
+    }}
+  >
+    Last update: {new Date().toISOString().replace('T', ' ').split('.')[0]} UTC
+  </span>
+</div>
+<br />
+
 import MySnippet from "/snippets/construction.mdx";
 
 <MySnippet/>
-
-<Tabs>
-
-<Tab title="Hean.Tech" icon="bird">
-</Tab>
-
-<Tab title="Drawing Made Easy: Dragons & Fantasy" icon="dragon">
-</Tab>
-
-<Tab title="Paint Like the Pre-Raphaelites" icon="paintbrush">
-</Tab>
-
-</Tabs>
