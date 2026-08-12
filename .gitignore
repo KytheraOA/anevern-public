@@ -12,6 +12,7 @@ updates.mdx
 snippets/latest-update.mdx
 site-architecture.mmd
 WIP-*
+#ignores any file with the `WIP-` prefix
 
 # ----------------------------------------------------------------------------------- #
 # Python scripts for automation 
