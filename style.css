@@ -3,9 +3,10 @@
 /*-----------------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
-* {
-  font-family: 'Agdasima', sans-serif !important;
+body {
+  font-family: 'Agdasima', sans-serif;
 }
 
 .agdasima-regular {
@@ -40,6 +41,13 @@ a { /* Link style */
 /* mouse over link */
 a:hover {
   color: #8576c6 !important;
+}
+
+/* monospace font */
+.share-tech-mono-regular {
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -230,9 +238,9 @@ h3.sidebar-title span {
 }
 
 /* 2. Target everything EXCEPT headings and force them to inherit the base size */
-#content-area :not(h1, h2, h3, h4, h5, h6, svg, i), 
-.prose :not(h1, h2, h3, h4, h5, h6, svg, i), 
-[data-component-name="mdx"] :not(h1, h2, h3, h4, h5, h6, svg, i) {
+#content-area :not(h1, h2, h3, h4, h5, h6, svg, i, .mono-force), 
+.prose :not(h1, h2, h3, h4, h5, h6, svg, i, .mono-force), 
+[data-component-name="mdx"] :not(h1, h2, h3, h4, h5, h6, svg, i, .mono-force) {
   font-size: inherit !important;
 }
 
@@ -268,7 +276,7 @@ h3.sidebar-title span {
 .prose h3 span { 
   font-family: 'Amatic SC', cursive !important;
   font-weight: 700 !important;
-  font-size: 20px !important; 
+  font-size: 24px !important; 
 }
 
 /* Heading Sizes */
@@ -393,7 +401,7 @@ footer a {
 
 /* Reduce the top spacing of the footer */
 footer {
-  background-image: url('https://www.anevern.com/images/ui-elements/review-header-bg.png');
+  background-image: url('https://www.anevern.com/images/ui-elements/footer-gradient.png');
   background-color: #000000 !important;
   background-size: contain;
   display: flex !important; /* Force the footer's bottom section to stack vertically */
@@ -596,6 +604,11 @@ html.gallery-open .fixed {
 /*-----------------------------------------------------------------------------------*/
 /*	10. Miscellaneous
 /*-----------------------------------------------------------------------------------*/
+
+/* Force monospace for status timestamps */
+.mono-force {
+  font-family: "Share Tech Mono" !important;
+}
 
 /* Line spacing for unordered lists */
 ul li {

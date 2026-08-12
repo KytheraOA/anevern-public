@@ -125,6 +125,65 @@ A page can have multiple gallery grids (e.g., to break it into sections with hea
 > [!NOTE] 
 > The gallery grid will _always_ be left-aligned, so a row with 1 or 2 images instead of 3 will be left-aligned.
 
+## Information Architecture
+
+<details>
+<summary>View annotated file structure</summary>
+
+`-/`  
+`├── etc/`  
+`│   ├── about.mdx` - “About Me” page  
+`│   ├── bluesky.mdx` - (redirects to Bluesky)  
+`│   ├── discord.mdx` - (redirects to Discord)  
+`│   ├── shop.mdx` - Index of user’s online shops & storefronts  
+`│   ├── support.mdx` - Subscription info (Patreon & Ko-fi)  
+`│   ├── tips.mdx` - Links to options for tipping  
+`│   └── twitch.mdx` - (redirects to Twitch)  
+`├── galleries/` - Artwork is organized into galleries according to topic  
+`│   ├── crow-and-gargoyle.mdx`  
+`│   ├── fan-art.mdx`  
+`│   ├── fantasy-art.mdx`  
+`│   ├── miniatures.mdx`  
+`│   ├── published-work.mdx`  
+`│   ├── sca.mdx`  
+`│   └── sketchbook.mdx`  
+`├── images/` - Images are stored in the local repo and uploaded to the web host, but NOT stored in the public GitHub repo. Remote folder: `http://www.anevern.com/images/` - (Each dir has an index file that redirects to the homempage)  
+`│   ├── anevern/` (Reserved for specific original characters from a specific setting)  
+`│   ├── crow-and-gargoyle/`  
+`│   ├── fan-art/`  
+`│   ├── fantasy-art/`  
+`│   ├── published-work/`  
+`│   ├── sca/`  
+`│   ├── sketchbook/`  
+`│   ├── social-icons/`  
+`│   ├── ui-elements/` - Exactly what it says on the tin  
+`│   │   ├── 404.jpg` - "princess in nother castle" cat  
+`│   │   ├── bg-dark.png` - Main background image  
+`│   │   ├── featured.png` - Background of header  
+`│   │   └── footer-gradient.png` - Background of footer  
+`│   └── index.mdx` - Gallery index page (in case the user ever somehow lands here)  
+`├── snippets/` - Reusable snippets and React components are stored here  
+`│   ├── 404.mdx` - Alternate 404 page (over-engineered)  
+`│   ├── construction.mdx` - "Under construction"  
+`│   ├── galleries.mdx` - Snippet that inserts a gallery index wherever I put it  
+`│   └── GalleryCard.tsx` - Custom React component  
+`├── .gitignore` - Standard .gitignore file  
+`├── .mintignore` - Mintlify-specific file that tells the compiler what to ignore when generating a static site build  
+`├── 404.mdx` - Custom 404 page  
+`├── CODE_OF_CONDUCT.md` - CoC for GitHub repo  
+`├── CONTRIBUTING.md` - Contributing guidelines for GitHub repo  
+`├── docs.json` - Contains site structure, metadata, etc.  
+`├── favicon.svg` - Site favicon  
+`├── footer.js` - Custom footer that adds copyright declaration and link to public GitHub repo  
+`├── index.mdx` - Site landing page  
+`├── LICENSE.md` - License info for the GitHub repo  
+`├── STYLE_GUIDE.md` - Style guide for the Mintlify site  
+`├── style.css` - CSS for customizing Mintlify  
+`└── README.md` - Specifically for the GitHub repo, explaining what the repo contains, purpose, etc.  
+
+Plus some assorted scripts, reference docs, and "note-to-self" files that are not shared.
+</details>
+
 ## Glossary (Word List)
 
 List of characters, places, and other things. Recorded here for consistency (and additional context for the things).
