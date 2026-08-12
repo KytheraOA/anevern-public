@@ -3,9 +3,10 @@
 /*-----------------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
-* {
-  font-family: 'Agdasima', sans-serif !important;
+body {
+  font-family: 'Agdasima', sans-serif;
 }
 
 .agdasima-regular {
@@ -40,6 +41,13 @@ a { /* Link style */
 /* mouse over link */
 a:hover {
   color: #8576c6 !important;
+}
+
+/* monospace font */
+.share-tech-mono-regular {
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -164,6 +172,7 @@ nav[aria-label="Sidebar"],
   font-size: 20px !important;
   border-right: 1px solid rgba(48, 48, 48, 0.8);
   border-top: 3px solid rgba(48, 48, 48, 0.8);
+  padding-top: -1rem !important;
 }
 
 /* Target the actual links and group headers */
@@ -206,7 +215,6 @@ h3.sidebar-title span {
 [class*="sidebar"] a.active,
 .nav-link-active {
   color: #8576c6 !important;
-  font-weight: 600 !important; /* Optional: makes it pop a bit more */
 }
 /* Ensure the icon next to the active link also turns purple (if applicable) */
 .sidebar-item-active svg,
@@ -220,33 +228,32 @@ h3.sidebar-title span {
 /*-----------------------------------------------------------------------------------*/
 
 /* Incrase paragraph text size */
-
 /* 1. Set the new base size on the content containers */
 #content-area, 
 .prose, 
 [data-component-name="mdx"] {
-  font-size: 18px !important; /* adjust this to your liking */
-  line-height: 1.5rem;
-  margin-top: 0;
+  font-size: 20px !important; /* adjust this to your liking */
+  line-height: 1.9rem;
+  margin-top: 0rem !important;
 }
 
 /* 2. Target everything EXCEPT headings and force them to inherit the base size */
-#content-area :not(h1, h2, h3, h4, h5, h6, svg, i), 
-.prose :not(h1, h2, h3, h4, h5, h6, svg, i), 
-[data-component-name="mdx"] :not(h1, h2, h3, h4, h5, h6, svg, i) {
+#content-area :not(h1, h2, h3, h4, h5, h6, svg, i, .mono-force), 
+.prose :not(h1, h2, h3, h4, h5, h6, svg, i, .mono-force), 
+[data-component-name="mdx"] :not(h1, h2, h3, h4, h5, h6, svg, i, .mono-force) {
   font-size: inherit !important;
 }
 
-/* Heading overrides */
-#page-title {
-  display: none !important; /* Hides the page title from the page body but keeps it in the sidebar nav*/
+.prose h2, .prose h3 {
+  margin-top: 0.5rem !important; /* Adds more "breathing room" before a new section starts */
+  margin-bottom: 0.5rem !important;
 }
 
 #page-title, /* The Main Page Title */
 .prose h1 {
   font-family: 'Amatic SC', cursive !important;
   font-weight: 700 !important;
-  font-size: 30px !important;
+  font-size: 35px !important;
   text-transform: none !important;
 }
 
@@ -255,21 +262,21 @@ h3.sidebar-title span {
 .prose h1 span { 
   font-family: 'Amatic SC', cursive !important;
   font-weight: 700 !important;
-  font-size: 30px !important; 
+  font-size: 35px !important; 
 }
 
 .prose h2, 
 .prose h2 span { 
   font-family: 'Amatic SC', cursive !important;
   font-weight: 700 !important;
-  font-size: 24px !important; 
+  font-size: 26px !important; 
 }
 
 .prose h3, 
 .prose h3 span { 
   font-family: 'Amatic SC', cursive !important;
   font-weight: 700 !important;
-  font-size: 22px !important; 
+  font-size: 24px !important; 
 }
 
 /* Heading Sizes */
@@ -283,33 +290,41 @@ h1 {
 h2 { /* This is what's used in "cards" */
   font-size: 24px !important;
   font-weight: 500; /* Somehow this impacts the weight of ALL heading levels */
-  margin-top: 0.5rem; /* Distance between h2 and icon above */
-  margin-bottom: 0.5rem;
+  margin-top: 1rem; /* Distance between h2 and icon above */
+  margin-bottom: 0rem;
 }
 
-h3 { /* This afffects the sidebar headings; try not to use h3 in body text */
+h3 { /* This afffects the sidebar headings */
   font-family: 'Amatic SC' !important;
   font-size: 22px !important;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
 }
 
 /*-----------------------------------------------------------------------------------*/
 /* 06. Body content overrides
 /*-----------------------------------------------------------------------------------*/
 
+/* When this empty div exists on a page, hide the header above it */
+#content-area:has(.hide-header-globally) header {
+  display: none !important;
+}
+
+#content-area {
+  margin-left: auto !important;   /* Allows the content to shift left when there's a TOC on the right side of the page */
+  max-width: 850px !important;    /* Sets a consistent "wall" for everything to hit */
+  width: 100% !important;
+  padding-left: 3rem !important;  /* Adjust this to set the exact gap from the sidebar */
+}
+
 /* Increase vertical spacing between rows in CardGroups */
 .card-group, 
 [class*="CardGroup"] {
-  row-gap: 1.5rem !important; /* Default is usually 1.5rem or 2rem. 4rem provides a clear break. */
+  row-gap: 1.5rem !important;  /* Default is usually 1.5rem or 2rem. 4rem provides a clear break. */
+  margin-bottom: 1rem;
+  margin-top: 1rem !important;
 }
 
-/* Force the content area to use more of the screen in Wide Mode */
-#content-area, 
-#body-content .prose,
-main .prose {
-  max-width: 800px !important; /* This expands the "walls" of your page (which will make the columns wider) */
-  width: 100% !important;
-  padding-bottom: 2rem !important;
-}
 /* Ensure the CardGroup/Grid actually fills that new space */
 .card-group, 
 [class*="CardGroup"],
@@ -331,7 +346,7 @@ main .prose {
 /* Target the text area (prose) inside any callout */
 div.flex.gap-3 > div.prose,
 div.flex.gap-3 > div.callout-content {
-  margin-bottom: -1.75rem !important;
+  margin-bottom: 0rem !important;
 }
 
 /* Remove margin from the last element inside the text area */
@@ -343,6 +358,7 @@ div.prose > *:last-child {
 div.flex.gap-3 h2 {
   margin-top: 0 !important;
   padding-top: 0 !important;
+  margin-bottom: 0rem !important;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -385,7 +401,7 @@ footer a {
 
 /* Reduce the top spacing of the footer */
 footer {
-  background-image: url('https://www.anevern.com/images/ui-elements/review-header-bg.png');
+  background-image: url('https://www.anevern.com/images/ui-elements/footer-gradient.png');
   background-color: #000000 !important;
   background-size: contain;
   display: flex !important; /* Force the footer's bottom section to stack vertically */
@@ -534,8 +550,65 @@ footer div:has(a[href*="mintlify.com"]) {
 }
 
 /*-----------------------------------------------------------------------------------*/
-/*	09. Miscellaneous
+/*	09. Lightbox & GalleryCard settings
 /*-----------------------------------------------------------------------------------*/
+
+/* When the gallery is open, hide all Mintlify UI elements */
+html.gallery-open header,
+html.gallery-open #header,
+html.gallery-open nav,
+html.gallery-open aside,
+html.gallery-open [class*="Header"],
+html.gallery-open [class*="Sidebar"],
+html.gallery-open [class*="Search"] {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+
+/* Force the background to stop scrolling on both HTML and Body */
+html.gallery-open,
+html.gallery-open body {
+  overflow: hidden !important;
+  height: 100vh !important;
+  position: fixed !important;
+  width: 100% !important;
+}
+
+/* Ensure our lightbox is the only thing visible */
+html.gallery-open .fixed {
+  z-index: 99999999 !important;
+}
+
+/* Your Custom Gallery Card Colors */
+.gallery-card.gallery-card.gallery-card {
+  background-color: rgba(41, 40, 43, 0.15) !important;
+  background-image: none !important;
+  border: 1px solid rgba(38, 38, 38, 0.577) !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+/* Subtle hover state to match the Frame feel */
+.gallery-card.gallery-card.gallery-card:hover {
+  background-color: rgba(41, 40, 43, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Ensure text colors are consistent */
+.gallery-card h3 { color: #ffffff !important; }
+.gallery-card span, .gallery-card p { color: #9ca3af !important; }
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	10. Miscellaneous
+/*-----------------------------------------------------------------------------------*/
+
+/* Force monospace for status timestamps */
+.mono-force {
+  font-family: "Share Tech Mono" !important;
+}
 
 /* Line spacing for unordered lists */
 ul li {
@@ -551,7 +624,7 @@ ul li {
 }
 
 /* Completely hide the search bar and its container */
-/* It would be nice if my site had its own search function, but that's not what this is. */
+/* Rationalle: Mintlify's built-in search functionality is part of their cloud-based service. Since I'm running my site as a static build hosted elsewhere, the built-in search function won't work properly. */
 #search-bar-entry,
 #search-bar-entry-mobile,
 .search-container,
@@ -597,7 +670,21 @@ div:has(> .tight-footnotes) {
   padding-bottom: 0 !important;
 }
 
+/* Disable Mintlify's native image zoom for gallery items */
+.gallery-card img, 
+[data-gallery="card"] img,
+.max-h-\[70vh\] img {
+  pointer-events: none !important;
+}
+
+/* Ensure the zoom button/overlay doesn't appear */
+[data-rmiz-btn-zoom], 
+[data-rmiz-ghost] {
+  display: none !important;
+  pointer-events: none !important;
+}
+
 /*-----------------------------------------------------------------------------------*/
-/*	10. Final Comments
+/*	11. Final Comments
 /*-----------------------------------------------------------------------------------*/
 /* This was a pain in the @$$ to code. It was made possible with help from a custom Rovo agent I named "Mintlify Donut"; "Mintlify" to specify what the agent was designed to help with, and "Donut" for the cat in _Dungeon Crawler Carl_ just so I could get the satisfaction of shouting "Goddammit Donut!" whenever I got frustrated. */

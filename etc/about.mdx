@@ -1,56 +1,72 @@
 ---
-title: "About"
+title: "About the Artist"
+sidebarTitle: "About"
 icon: "circle-info"
+hideFooterPagination: true
 mode: "wide"
 noindex: true
 ---
-
-<div className="flex flex-row-reverse items-start justify-between gap-8">
-  <img
-    src="https://www.anevern.com/images/garg-and-garg.jpg"
-    style={{ width: "300px", height: "auto", border: "1px solid black" }}
-    className="rounded-lg mb-4"
-    noZoom
-    alt="Photograph of the artist standing in front of a bronze gargoyle statue at the Texas Renaissance Faire" />
-  <div className="flex-1">
-
-# About the artist
-
-Kythera of Anevern is lifelong artist specializing in fantasy art, especially gargoyles and other misunderstood monsters. <br/>
-<br/>
-Author of _Drawing Made Easy: Dragons & Fantasy_ from Walter Foster Publishing. She currently shares an apartment in Houston, TX with the feline equivalent of Pinky & the Brain.
-
-<div className="flex items-center gap-2 mt-0">
-  <img 
-    src="https://www.anevern.com/images/No-Ai-icon.png" 
-    className="w-[36px] h-[30px] block" 
-    alt="No AI Icon"
-  />
-  <span>**NO GEN-AI!** All of the writing and artwork on this site was created by hand by a real human.</span>
+<div className="ml-6 -m-5">
+  <span 
+    className="mono-force uppercase text-xs" 
+    style={{ 
+      color: '#71717a' 
+    }}
+  >
+    Last update: {new Date().toISOString().replace('T', ' ').split('.')[0]} UTC
+  </span>
 </div>
+<br />
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start not-prose">
+  <div>
+    <p className="text-lg text-[#a2a2a4] leading-relaxed">
+      Kythera of Anevern is lifelong artist specializing in fantasy art, especially gargoyles and other misunderstood monsters.
+    </p>
+    <p className="text-lg text-[#a2a2a4] mt-4 leading-relaxed">
+      Author of _Drawing Made Easy: Dragons & Fantasy_ from Walter Foster Publishing. She currently shares an apartment in Houston, TX with the feline equivalent of Pinky & the Brain.
+    </p>
+    <div className="flex items-center gap-2 mt-4">
+      <img 
+        src="https://www.anevern.com/images/No-Ai-icon.png" 
+        className="w-[40px] h-[40px] block"
+        noZoom
+        alt="No AI Icon"
+      />
+      <span className="text-[#a2a2a4]">**NO GEN-AI!** All of the writing and artwork on this site was created by hand by a real human.</span>
+    </div>
   </div>
+  <img 
+    src="https://www.anevern.com/images/garg-and-garg.jpg" 
+    alt="Photograph of the artist standing in front of a bronze gargoyle statue at the Texas Renaissance Faire"
+    className="rounded-xl border border-[#8576c6] shadow-lg"
+    style={{ borderColor: '#8576c6' }}
+  />
 </div>
 
 <Callout type="info" icon="circle-info" className="align-icon-callout">
   <div className="-mb-6 mt-0">
     <h2 className="m-0 text-lg leading-none">Land acknowledgement</h2>
     <div className="mt-1 text-sm leading-snug">
-      I was born on the ancestral lands of the _Chumash_ and _Tongva (Gabrieleño)_ peoples in Southern California. <br/>
-      I currently live within the traditional territory of the _Karankawa_, _Coahuiltecan_, _Atakapa-Ishak_, and _Sana_ peoples in Texas.<br/>
+      I was born on the ancestral lands of the _Chumash_ and _Tongva (Gabrieleño)_ peoples in Southern California.  
+      I currently live within the traditional territory of the _Karankawa_, _Coahuiltecan_, _Atakapa-Ishak_, and _Sana_ peoples in Texas.  
       I strive every day to live with respect for these lands and waters, and the peoples and ancestors who care for these places.
+      To learn more, [visit Native Land Digital](https://native-land.ca/).
     </div>
   </div>
 </Callout>
 
 <Tip>If you’re looking for my technical writing portfolio, [click here to go to documentation-czar.com](https://www.documentation-czar.com).</Tip>
 
-<Callout icon="none">
-  <h2 style={{ color: '#747376', marginTop: 0, marginBottom: '-1rem' }}>Footnotes</h2>
-  <div className="tight-footnotes" style={{ color: '#747376' }}>
-    * This website was built using the [Luma](https://luma.mintlify.site/) theme for [Mintlify](https://www.mintlify.com/) as a base.
-    * Most of the icons are from [Font Awesome](https://fontawesome.com/), used in Mintlfy by default.
-    * Some of the graphic UI elements are from the [GamePress theme for WordPress](https://themesinfo.com/gamepress-wordpress-news-theme-hc3) (which seems to be abandoned by the developer).
-    * "[Another Castle Sry](https://www.anevern.com/images/ui-elements/404.jpg)" cat was originally found a very long time ago on https://icanhas.cheezburger.com/.
-    * I used Atlassian Rovo to assist with customizing the CSS for this site. _**Absolutely no generative AI is used in any of my artwork or writing.**_
+<Callout icon="asterisk" color="#a2a2a4">
+  <h2 style={{ color: '#a2a2a4', marginTop: 0, marginBottom: '0.5rem' }}>Footnotes</h2>
+  <div style={{ color: '#a2a2a4' }}>
+    <ul style={{ margin: 0, paddingLeft: '1.5rem' }}>
+      <li>This website was built using the [Luma](https://luma.mintlify.site/) theme for [Mintlify](https://www.mintlify.com/) as a base.</li>
+      <li>Most of the icons are from [Font Awesome](https://fontawesome.com/), used in Mintlfy by default.</li>
+      <li>Some of the graphic UI elements are from the [GamePress theme for WordPress](https://themesinfo.com/gamepress-wordpress-news-theme-hc3)(which seems to have been abandoned by the developer).</li>
+      <li>"[Another Castle Sry](https://www.anevern.com/images/ui-elements/404.jpg)" cat was originally found a very long time ago on https://icanhas.cheezburger.com/.</li>
+      <li>I used [Atlassian Rovo](https://www.atlassian.com/software/rovo) to assist with customizing the CSS for this site. _**Absolutely no generative AI is used in any of my artwork or writing.**_</li>
+    </ul>
   </div>
 </Callout>

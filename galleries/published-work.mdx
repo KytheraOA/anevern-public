@@ -1,11 +1,23 @@
 ---
-title: "Published Work"
+title: "Published Works"
+sidebarTitle: "Published Work"
 icon: "road-barrier"
 mode: "wide"
 noindex: true
 ---
+import { GalleryCard } from '/snippets/GalleryCard.tsx';
 
-# Published Works
+<div className="ml-6 -m-5">
+  <span 
+    className="mono-force uppercase text-xs" 
+    style={{ 
+      color: '#71717a' 
+    }}
+  >
+    Last update: {new Date().toISOString().replace('T', ' ').split('.')[0]} UTC
+  </span>
+</div>
+<br />
 
 import MySnippet from "/snippets/construction.mdx";
 

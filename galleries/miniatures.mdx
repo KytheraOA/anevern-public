@@ -1,18 +1,31 @@
 ---
-title: "Miniatures"
+title: "Miniatures & Scale Models Gallery"
+sidebarTitle: "Miniatures"
 icon: "road-barrier"
 mode: "wide"
 noindex: true
 ---
+import { GalleryCard } from '/snippets/GalleryCard.tsx';
 
-# Miniatures & Scale Models Gallery
+<div className="ml-6 -m-5">
+  <span 
+    className="mono-force uppercase text-xs" 
+    style={{ 
+      color: '#71717a' 
+    }}
+  >
+    Last update: {new Date().toISOString().replace('T', ' ').split('.')[0]} UTC
+  </span>
+</div>
+<br />
 
-<div className="max-w-lg ">
+<div className="max-w-lg">
   <Card title="Under Construction" type="warning" lassName="flex flex-col">
     I'm still rebuilding this page. 😅<br/> In the meantime, some of my models are in my [Putty & Paint gallery](https://www.puttyandpaint.com/KytheraOA).
     <img 
-      src="/images/ui-elements/404.jpg" 
-      className="rounded-xl mt-4 w-full" 
+      src="https://www.anevern.com/images/ui-elements/404.jpg" 
+      className="rounded-md mt-4 w-full"
+      style={{ border: "1px solid rgb(113, 63, 18)" }} 
       noZoom
       alt="A Bengal cat wearing a tiny mushroom hat. The image says 'princess in nother castle sry'"
     /> 

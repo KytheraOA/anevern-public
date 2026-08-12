@@ -1,20 +1,538 @@
 ---
-title: "Fan Art"
-icon: "road-barrier"
+title: "Fan Art Gallery"
+sidebarTitle: "Fan Art"
 mode: "wide"
 noindex: true
 ---
+import { GalleryCard } from '/snippets/GalleryCard.tsx';
 
-#  Fan Art Gallery
-
-<div className="max-w-lg ">
-  <Card title="Under Construction" type="warning" lassName="flex flex-col">
-    I'm still rebuilding this page. 😅<br/> In the meantime, you can find my work on <Icon icon="paw" iconType="solid" /> [Fur Affinity](https://www.furaffinity.net/user/kytheraoa).
-    <img 
-      src="/images/ui-elements/404.jpg" 
-      className="rounded-xl mt-4 w-full" 
-      noZoom
-      alt="A Bengal cat wearing a tiny mushroom hat. The image says 'princess in nother castle sry'"
-    /> 
-  </Card>
+<div className="ml-6 -m-5">
+  <span 
+    className="mono-force uppercase text-xs" 
+    style={{ 
+      color: '#71717a' 
+    }}
+  >
+    Last update: {new Date().toISOString().replace('T', ' ').split('.')[0]} UTC
+  </span>
 </div>
+
+Artwork based on characters from TV shows, movies, video games, comics, etc. Divided into sections by topic. Use the tabs below to switch between sections.
+
+<Tabs>
+  <Tab title="Gargoyles" icon="shield-cat">
+   
+## Gargoyles
+
+_Gargoyles_ is my favorite animated series, and it has had a profound influence on my art. I've been deeply involved in the fandom since the late '90s. This section is for fan art of canon characters from the series.
+
+<GalleryCard
+  items={[
+    {
+      title: "Demona Says 'Jalapeña'",
+      image: "https://www.anevern.com/images/fan-art/demona-jalapena-72wm.png",
+      alt: "",
+      date: "2023",
+      media: "Ink and Marker",
+      description: "There was a bet that Greg Weisman couldn't get Demona to say 'Jalapeña'",
+      focalPoint: "top"
+    },
+    {
+      title: "The WORST Cheeseburger",
+      image: "https://www.anevern.com/images/fan-art/worst-cheeseburger-72wm.png",
+      alt: "",
+      date: "2023",
+      media: "Ink and Marker",
+      description: "There was a story about a cheeseburger so bad even Bronx probably wouldn't eat it",
+      focalPoint: "50% 63%"
+    },
+    {
+      title: "Gargoyles Cover",
+      image: "https://www.anevern.com/images/fan-art/gargoyles-cover-72wm.png",
+      alt: "",
+      date: "2022",
+      media: "Ink, White Marker, Luminous Paint",
+      description: "Original ink drawing on a 'blank cover' copy of 'Gargoyles #1'"
+    },
+    {
+      title: "Thailog",
+      image: "https://www.anevern.com/images/fan-art/ACEO-Thailog02.jpg",
+      alt: "",
+      date: "2010",
+      media: "Ink and Marker",
+      focalPoint: "50% 10%"
+    },
+    {
+      title: "Angela",
+      image: "https://www.anevern.com/images/fan-art/ACEO-Angela01.jpg",
+      alt: "",
+      date: "2010",
+      media: "Ink and Marker"
+    },
+    {
+      title: "Brooklyn",
+      image: "https://www.anevern.com/images/fan-art/ACEO-Brooklyn05.jpg",
+      alt: "",
+      date: "2010",
+      media: "Ink and Marker"
+    },
+    {
+      title: "Brooklyn",
+      image: "https://www.anevern.com/images/fan-art/ACEO-Brooklyn04.jpg",
+      alt: "",
+      date: "2010",
+      media: "Ink and Marker"
+    },
+    {
+      title: "Memento Mori",
+      image: "https://www.anevern.com/images/fan-art/memento-mori-72wm.jpg",
+      alt: "",
+      date: "2010",
+      media: "Digital Art",
+      description: "'Remember you must die'",
+      focalPoint: "50% 30%"
+    },
+    {
+      title: "Carpe Noctem",
+      image: "https://www.anevern.com/images/fan-art/carpe-noctem-72wm.jpg",
+      alt: "",
+      date: "2010",
+      media: "Digital Art",
+      description: "'Seize the Night'",
+      focalPoint: "50% 35%"
+    },
+    {
+      title: "Goliath",
+      image: "https://www.anevern.com/images/fan-art/ACEO-Goliath06.jpg",
+      alt: "",
+      date: "2010",
+      media: "Ink and Marker"
+    },
+    {
+      title: "Demona",
+      image: "https://www.anevern.com/images/fan-art/ACEO-Demona03.jpg",
+      alt: "",
+      date: "2010",
+      media: "Ink and Marker"
+    },
+    {
+      title: "Goliath",
+      image: "https://www.anevern.com/images/fan-art/ACEO-Goliath05.jpg",
+      alt: "",
+      date: "2010",
+      media: "Ink and Marker"
+    },
+    {
+      title: "Goliath",
+      image: "https://www.anevern.com/images/fan-art/ACEO-Goliath04.jpg",
+      alt: "",
+      date: "2009",
+      media: "Ink and Marker"
+    },
+    {
+      title: "Goliath",
+      image: "https://www.anevern.com/images/fan-art/ACEO-Goliath02.jpg",
+      alt: "",
+      date: "2009",
+      media: "Ink and Marker"
+    },
+    {
+      title: "Brooklyn",
+      image: "https://www.anevern.com/images/fan-art/ACEO-Brooklyn01.jpg",
+      alt: "",
+      date: "2009",
+      media: "Ink and Marker"
+    },
+    {
+      title: "Demona",
+      image: "https://www.anevern.com/images/fan-art/ACEO-Demona02.jpg",
+      alt: "",
+      date: "2009",
+      media: "Ink and Marker"
+    },
+    {
+      title: "Demona",
+      image: "https://www.anevern.com/images/fan-art/ACEO-Demona01.jpg",
+      alt: "",
+      date: "2009",
+      media: "Ink and Marker"
+    },
+    {
+      title: "Bronx",
+      image: "https://www.anevern.com/images/fan-art/ACEO-Bronx01.jpg",
+      alt: "",
+      date: "2010",
+      media: "Ink and Marker",
+      focalPoint: "50% 70%"
+    },
+    {
+      title: "Hotel Cabal Anthology",
+      image: "https://www.anevern.com/images/fan-art/hotel-cabal-anthology-72wm.jpg",
+      alt: "",
+      date: "2009",
+      media: "Digital Art",
+      description: "Cover design for a fanfiction anthology",
+      focalPoint: "50% 30%"
+    },
+    {
+      title: "Full Circle",
+      image: "https://www.anevern.com/images/fan-art/full-circle-72wm.jpg",
+      alt: "",
+      date: "2009",
+      media: "Digital Art"
+    },
+    {
+      title: "Goliath",
+      image: "https://www.anevern.com/images/fan-art/ACEO-Goliath01.jpg",
+      alt: "",
+      date: "2009",
+      media: "Ink and Marker"
+    },
+    {
+      title: "The Hound of Ulster",
+      image: "https://www.anevern.com/images/fan-art/hound-of-ulster-72wm.jpg",
+      alt: "",
+      date: "2007",
+      media: "Digital Art"
+    },
+    {
+      title: "Take to the Sky",
+      image: "https://www.anevern.com/images/fan-art/take-to-the-sky-72wm.jpg",
+      alt: "",
+      date: "2007",
+      media: "Ink and Marker",
+      focalPoint: "50% 30%"
+    },
+    {
+      title: "Highland Storm",
+      image: "https://www.anevern.com/images/fan-art/highland-storm-72wm.jpg",
+      alt: "",
+      date: "2006",
+      media: "Digital Art",
+      focalPoint: "50% 35%"
+    },
+    {
+      title: "Grimorum Arcanorum Anthology",
+      image: "https://www.anevern.com/images/fan-art/grimorum-arcanorum-anthology-72wm.jpg",
+      alt: "",
+      date: "2006",
+      media: "Digital Art",
+      description: "Cover design for a fanfiction anthology"
+    },
+    {
+      title: "The Demon",
+      image: "https://www.anevern.com/images/fan-art/the-demon-72wm.jpg",
+      alt: "",
+      date: "2006",
+      media: "Ink and Marker",
+      focalPoint: "50% 25%"
+    },
+    {
+      title: "Pillar",
+      image: "https://www.anevern.com/images/fan-art/pillar-72wm.jpg",
+      alt: "",
+      date: "2004",
+      media: "Digital Art",
+      focalPoint: "50% 10%"
+    },
+    {
+      title: "The Storm",
+      image: "https://www.anevern.com/images/fan-art/the-storm-72wm.jpg",
+      alt: "",
+      date: "2004",
+      media: "Digital Art",
+      focalPoint: "50% 20%"
+    },
+    {
+      title: "Phoenix Gate",
+      image: "https://www.anevern.com/images/fan-art/phoenix-gate-72wm.jpg",
+      alt: "",
+      date: "2004",
+      media: "Digital Art"
+    },
+    {
+      title: "Mourning Goliath",
+      image: "https://www.anevern.com/images/fan-art/mourning-goliath-72wm.jpg",
+      alt: "",
+      date: "2002",
+      media: "Digital Art",
+      description: "Ballpoint Pen",
+      focalPoint: "50% 75%"
+    },
+    {
+      title: "Young and Proud",
+      image: "https://www.anevern.com/images/fan-art/young-and-proud-72wm.jpg",
+      alt: "",
+      date: "2001",
+      media: "Ballpoint Pen"
+    },
+    {
+      title: "Angela",
+      image: "https://www.anevern.com/images/fan-art/angela-2001-72-wm.jpg",
+      alt: "",
+      date: "2001",
+      media: "Ballpoint Pen",
+      focalPoint: "50% 30%"
+    },
+    {
+      title: "The Hunted",
+      image: "https://www.anevern.com/images/fan-art/the-hunted-72wm.jpg",
+      alt: "",
+      date: "2001",
+      media: "Ballpoint Pen",
+      focalPoint: "50% 30%"
+    },
+    {
+      title: "Goliath",
+      image: "https://www.anevern.com/images/fan-art/goliath-2001-72wm.jpg",
+      alt: "",
+      date: "2001",
+      media: "Ballpoint Pen",
+      focalPoint: "50% 12%"
+    }
+  ]}
+/>
+
+</Tab>
+
+<Tab title="Gargoyles Fan Characters" icon="pencil">
+
+## Gargoyles Fan Characters
+
+These are original characters inspired by _Gargoyles_. Characters who belong to others are noted in captions.
+
+<GalleryCard
+  items={[
+    {
+      title: "Mórgú Mirror'd",
+      image: "https://www.anevern.com/images/fan-art/morgu-mirrored-72wm.jpg",
+      alt: "",
+      date: "2006",
+      media: "Digital Art"
+    },
+    {
+      title: "Cairn Warder",
+      image: "https://www.anevern.com/images/fan-art/cairn-warder-72wm.jpg",
+      alt: "",
+      date: "2005",
+      media: "Ink and Marker"
+    },
+    {
+      title: "Isis",
+      image: "https://www.anevern.com/images/fan-art/isis-72wm.jpg",
+      alt: "",
+      date: "2003",
+      media: "Ink",
+      description: "The Egyptian goddess Isis as a gargoyle",
+      focalPoint: "50% 10%"
+    },
+    {
+      title: "Thoughts for the Day",
+      image: "https://www.anevern.com/images/fan-art/thoughts-for-the-day-72wm.jpg",
+      alt: "",
+      date: "2004",
+      media: "Ink",
+      description: "Orin belongs to CrzyDemona",
+      focalPoint: "50% 20%"
+    },
+    {
+      title: "Dragonblink",
+      image: "https://www.anevern.com/images/fan-art/dragonblink-72wm.jpg",
+      alt: "",
+      date: "2004",
+      media: "Digital Art",
+      description: (
+        <span>
+          Portrait of my friend <a href="https://www.twitch.tv/blinkiesnogood" target="_blank" onClick={(e) => e.stopPropagation()} className="border-b border-purple-400 hover:[border-bottom-width:2px]">Blinkie</a> as a gargoyle
+        </span>
+      )
+    },
+    {
+      title: "Mórgú",
+      image: "https://www.anevern.com/images/fan-art/morgu-72wm.jpg",
+      alt: "",
+      date: "2003",
+      media: "Digital Art",
+      description: "My 16th century Irish gargoyle",
+      focalPoint: "50% 10%"
+    },
+    {
+      title: "This Moment is Eternity",
+      image: "https://www.anevern.com/images/fan-art/this-moment-is-eternity-72wm.jpg",
+      alt: "",
+      date: "2002",
+      media: "Digital Art",
+      description: "Singer Tarja Turunen as a gargoyle"
+    }
+  ]}
+/>
+
+</Tab>
+
+<Tab title="Video Games" icon="gamepad">
+
+## Video Games
+
+Works inspired by video games.
+
+<GalleryCard
+  items={[
+    {
+      title: "Limsa Lominsa Pride",
+      image: "https://www.anevern.com/images/fan-art/limsa-lominsa-pride-72wm.png",
+      alt: "",
+      date: "2017",
+      media: "Ink and Colored Pencil",
+      description: "Merlwyb Bloefhiswyn from 'Final Fantasy XIV'",
+      focalPoint: "50% 20%"
+    },
+    {
+      title: "Maelstrom Notebook Cover",
+      image: "https://www.anevern.com/images/fan-art/maelstrom-notebook-cover-72.png",
+      alt: "",
+      date: "2015",
+      media: "Leather",
+      description: "Tooled leather notebook cover inspired by the Maelstrom faction of 'Final Fantasy XIV'"
+    },
+    {
+      title: "Gladiolus Glove",
+      image: "https://www.anevern.com/images/fan-art/gladiolus-glove.png",
+      alt: "",
+      date: "2015",
+      media: "Leather",
+      description: "Leather reproduction of the iconic glove worn by Gladiolus from 'Final Fantasy XV'"
+    },
+    {
+      title: "A Dangerous Smile",
+      image: "https://www.anevern.com/images/fan-art/merlwyb-amused-72wm.png",
+      alt: "",
+      date: "2015",
+      media: "Ink and Marker",
+      description: "Merlwyb Bloefhiswyn from 'Final Fantasy XIV'",
+      focalPoint: "50% 10%"
+    },
+    {
+      title: "The Weight of Command",
+      image: "https://www.anevern.com/images/fan-art/merlwyb-weight-of-command-72wm.png",
+      alt: "",
+      date: "2015",
+      media: "Ink and Marker",
+      description: "Merlwyb Bloefhiswyn from 'Final Fantasy XIV'"
+    },
+    {
+      title: "Sea Woman",
+      image: "https://www.anevern.com/images/fan-art/merlwyb-sea-woman-72wm.png",
+      alt: "",
+      date: "2015",
+      media: "Ink and White Marker",
+      description: "Merlwyb Bloefhiswyn from 'Final Fantasy XIV'"
+    },
+    {
+      title: "Merlwyb",
+      image: "https://www.anevern.com/images/fan-art/merlwyb-72wm.png",
+      alt: "",
+      date: "2015",
+      media: "Ink and White Marker",
+      description: "Merlwyb Bloefhiswyn from 'Final Fantasy XIV'",
+      focalPoint: "50% 35%"
+    },
+    {
+      title: "Catamari Damaci",
+      image: "https://www.anevern.com/images/fan-art/catamari-damaci-72wm.jpg",
+      alt: "",
+      date: "2013",
+      media: "Ink and Marker",
+      description: "A pun based on 'Katamari Damaci'"
+    },
+    {
+      title: "Still Alive",
+      image: "https://www.anevern.com/images/fan-art/ACEO-CompanionCube.jpg",
+      alt: "",
+      date: "2011",
+      media: "Ink and Marker",
+      description: "Weighted companion cube from 'Portal'"
+    },
+    {
+      title: "Blanka",
+      image: "https://www.anevern.com/images/fan-art/ACEO-Blanka01.jpg",
+      alt: "",
+      date: "2010",
+      media: "Ink and Marker",
+      description: "Blanka from 'Street Fighter'"
+    },
+    {
+      title: "Bowser",
+      image: "https://www.anevern.com/images/fan-art/ACEO-Bowser01.jpg",
+      alt: "",
+      date: "2010",
+      media: "Ink and Marker",
+      description: "Bowser from 'Super Mario Bros.'"
+    }
+  ]}
+/>
+
+</Tab>
+
+  <Tab title="Other" icon="masks-theater">
+
+## Other
+
+Fan art inspired by movies, comics, and other media.
+
+<GalleryCard
+  items={[
+    {
+      title: "I Wonder...",
+      image: "https://www.anevern.com/images/fan-art/i-wonder-72wm.png",
+      alt: "",
+      date: "2014",
+      media: "Ink and Colored Pencil",
+      description: "Maleficent, based on the live-action movie",
+      focalPoint: "50% 10%"
+    },
+    {
+      title: "Marlowe and General Guster",
+      image: "https://www.anevern.com/images/fan-art/ACEO-Marlowe.jpg",
+      alt: "",
+      date: "2011",
+      media: "Ink and Marker",
+      description: (
+        <span>
+          Marlowe the Monster from the comic by <a href="https://shingkhor.com/" target="_blank" onClick={(e) => e.stopPropagation()} className="border-b border-[#8576c6] hover:[border-bottom-width:2px]">Shing Yin Khor</a>
+        </span>
+        ),
+      focalPoint: "50% 10%"
+    },
+    {
+      title: "Darkness 3",
+      image: "https://www.anevern.com/images/fan-art/ACEO-Darkness03.jpg",
+      alt: "",
+      date: "2010",
+      media: "Ink and Marker",
+      description: "Lord of Darkness from 'Legend'",
+      focalPoint: "50% 60%"
+    },
+    {
+      title: "Darkness 2",
+      image: "https://www.anevern.com/images/fan-art/ACEO-Darkness02.jpg",
+      alt: "",
+      date: "2010",
+      media: "Ink and Marker",
+      description: "Lord of Darkness from 'Legend'",
+      focalPoint: "50% 80%"
+    },
+    {
+      title: "Darkness",
+      image: "https://www.anevern.com/images/fan-art/ACEO-Darkness01.jpg",
+      alt: "",
+      date: "2010",
+      media: "Ink",
+      description: "Lord of Darkness from 'Legend'",
+      focalPoint: "50% 10%"
+    },
+  ]}
+/>
+
+</Tab>
+
+</Tabs>

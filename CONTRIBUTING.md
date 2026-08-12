@@ -1,4 +1,4 @@
-# Contribution Guide
+# Contribution guide
 
 Hi there! Thanks for taking the time to read this. 
 

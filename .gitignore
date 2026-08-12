@@ -1,19 +1,49 @@
-# WIP, reference, and other stuff not part of my website #
-##########################################################
+# ----------------------------------------------------------------------------------- #
+#	WIP, reference, and other stuff not part of my website
+# ----------------------------------------------------------------------------------- #
 .archive/
 .vscode/
 .reference/
+node_modules/
+00-NOTE-TO-SELF.mdx
+00-GalleryCard-reference.mdx
+00-reference.mdx
+updates.mdx
+snippets/latest-update.mdx
+site-architecture.mmd
+WIP-*
+#ignores any file with the `WIP-` prefix
 
-# Ignore OS-generated .DS_Store files #
-#######################################
+# ----------------------------------------------------------------------------------- #
+# Python scripts for automation 
+# ----------------------------------------------------------------------------------- #
+generate_gallery.py
+gallery_output.txt
+processed_images.txt
+# Checks a folder for new images and generates output that I can paste into a gallery page and keeps track of everything with a manifest
+deploy.sh 
+# Generates site and uploads it to my webhost
+
+# ----------------------------------------------------------------------------------- #
+# Ignore OS-generated .DS_Store files 
+# ----------------------------------------------------------------------------------- #
 .DS_Store
 .DS_Store?
 ._*
 
-# Ignore files stored in CDN [local storage is included for easy reference] #
-#############################################################################
+# ----------------------------------------------------------------------------------- #
+# Ignore files stored in CDN [local storage is included for easy reference] 
+# ----------------------------------------------------------------------------------- #
 images/
 
-# Ignore .mintignore #
-######################
+# ----------------------------------------------------------------------------------- #
+# Ignore self 
+# ----------------------------------------------------------------------------------- #
+.gitignore
 .mintignore
+
+# ----------------------------------------------------------------------------------- #
+# Mysterious stuff? 
+# ----------------------------------------------------------------------------------- #node_modules/
+package-lock.json
+package.json

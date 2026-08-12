@@ -24,21 +24,11 @@
     "library": "fontawesome"
   },
   "colors": {
-    "primary": "#8576c6",
+    "primary": "#52419c",
     "light": "#8576c6",
     "dark": "#8576c6"
   },
   "favicon": "/favicon.svg",
-    "redirects": [
-    {
-      "source": "/etc/discord",
-      "destination": "https://discord.gg/kDDBW25mcC"
-    },
-    {
-      "source": "/etc/bluesky",
-      "destination": "https://bsky.app/profile/kythera.bsky.social"
-    }
-  ],
   "navigation": {
     "groups": [
       {
@@ -51,19 +41,20 @@
       {
         "group": "Artwork",
         "pages": [
-          "/galleries/crow-and-gargoyle",
-          "/galleries/fantasy-art",
-          "/galleries/fan-art",
-          "/galleries/sca",
-          "/galleries/sketchbook",
-          "/galleries/miniatures",
-          "/galleries/published-work"
+          "galleries/index",
+          "galleries/crow-and-gargoyle",
+          "galleries/fantasy-art",
+          "galleries/fan-art",
+          "galleries/sca",
+          "galleries/sketchbook",
+          "galleries/miniatures",
+          "galleries/published-work"
         ]
       },
       {
         "group": "Support",
         "pages": [
-          "etc/support",
+          "etc/subscribe",
           "etc/tips",
           "etc/shop"
         ]
