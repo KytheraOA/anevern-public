@@ -2,27 +2,46 @@
 #	WIP, reference, and other stuff not part of my website
 # ----------------------------------------------------------------------------------- #
 .archive/
+.github/
 .vscode/
 .reference/
-node_modules/
+builds/
 00-NOTE-TO-SELF.mdx
 00-GalleryCard-reference.mdx
 00-reference.mdx
 updates.mdx
 snippets/latest-update.mdx
 site-architecture.mmd
+
 WIP-*
-#ignores any file with the `WIP-` prefix
+# ignores any file with the `WIP-` prefix
 
 # ----------------------------------------------------------------------------------- #
-# Python scripts for automation 
+# Python scripts for automation, variables, & output logs
 # ----------------------------------------------------------------------------------- #
 generate_gallery.py
-gallery_output.txt
-processed_images.txt
-# Checks a folder for new images and generates output that I can paste into a gallery page and keeps track of everything with a manifest
+# generates gallery card code for me to copy-paste into gallery pages
+
 deploy.sh 
-# Generates site and uploads it to my webhost
+# Generates static site and uploads it to my webhost
+
+export.zip
+# Static site build
+
+temp_build/
+# Where the static pages are stored for remote upload
+
+logs/
+# Stores output logs that are easier to read than terminal output
+
+.env
+
+# ----------------------------------------------------------------------------------- #
+# Ignore local files that are  stored in CDN
+# Having them stored locally makes them easy to reference but they don't need to be
+# included in every build or re-uploaded every time.
+# ----------------------------------------------------------------------------------- #
+images/
 
 # ----------------------------------------------------------------------------------- #
 # Ignore OS-generated .DS_Store files 
@@ -32,14 +51,8 @@ deploy.sh
 ._*
 
 # ----------------------------------------------------------------------------------- #
-# Ignore files stored in CDN [local storage is included for easy reference] 
+# Ignore the file that tells Mintlify what to ignore when running `mint export`
 # ----------------------------------------------------------------------------------- #
-images/
-
-# ----------------------------------------------------------------------------------- #
-# Ignore self 
-# ----------------------------------------------------------------------------------- #
-.gitignore
 .mintignore
 
 # ----------------------------------------------------------------------------------- #

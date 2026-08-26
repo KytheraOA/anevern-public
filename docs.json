@@ -17,6 +17,9 @@
       "og:description": "Fantasy Art by Kythera of Anevern"
     }
   },
+  "metadata": {
+    "timestamp": true
+  },
   "$schema": "https://mintlify.com/docs.json",
   "theme": "luma",
   "name": "Anevern",
